@@ -1,0 +1,605 @@
+[
+  {
+    "id": 1,
+    "name": "Mint2",
+    "price": "$30.78",
+    "rating": 2.9,
+    "reviews": 7,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738768427%2Fproduct%2F60c88fa9379ac-square-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "discount": "56 % Off",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 718,
+    "description": "Fresh mint leaves for cooking, tea, and garnish.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Premium T-Shirt",
+    "price": "$450.00",
+    "rating": 3.6,
+    "reviews": 9,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738768685%2Fproduct%2FHimalaya-Baby-Powder-100g-removebg-preview.png&w=3840&q=75",
+    "category": "Man",
+    "discount": "9 % Off",
+
+    "subcategory": ["premium-shirt", "t-shirt", "new-t-shirt"],
+    "stock": 256,
+    "description": "Soft, breathable cotton T-shirt perfect for daily wear.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Clementine",
+    "price": "$48.12",
+    "rating": 3.2,
+    "reviews": 10,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738768992%2Fproduct%2FClementine-5ct-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-fruit",
+    "discount": "11 % Off",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 932,
+    "description": "Juicy clementines rich in vitamin C and antioxidants.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Lettuce",
+    "price": "$193.26",
+    "rating": 4.0,
+    "reviews": 5,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769251%2Fproduct%2FLettuce-1lb-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "discount": "15 % Off",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 614,
+    "description": "Crisp and fresh lettuce perfect for salads and wraps.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Calabaza Squash",
+    "price": "$98.03",
+    "rating": 3.6,
+    "reviews": 6,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769215%2Fproduct%2FCalabaza-Squash-Package-each-removebg-preview%25281%2529.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "discount": "18 % Off",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 780,
+    "description": "Organic calabaza squash with a sweet and nutty flavor.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Organic Baby Carrot",
+    "price": "$150.00",
+    "oldPrice": "$168.23",
+    "discount": "11 % Off",
+    "rating": 4.1,
+    "reviews": 8,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738770398%2Fproduct%2FOrganic-Baby-Carrot-1oz-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 1050,
+    "description": "Crunchy organic baby carrots rich in beta carotene.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Organic Cherry Tomato",
+    "price": "$15.56",
+    "discount": "35 % Off",
+    "rating": 2.8,
+    "reviews": 6,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738770456%2Fproduct%2FOrange-Cherry-Tomato-5qt-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 546,
+    "description": "Sweet organic cherry tomatoes perfect for garnishing and salads.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Atlantic",
+    "price": "$10.36",
+    "discount": "11 % Off",
+    "rating": 2.5,
+    "reviews": 6,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738770398%2Fproduct%2FOrganic-Baby-Carrot-1oz-removebg-preview.png&w=3840&q=75",
+    "category": "seafood",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 233,
+    "description": "Fresh Atlantic salmon fillet rich in Omega-3 fatty acids.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Yellow Sweet Corn",
+    "price": "$80.97",
+    "discount": "19 % Off",
+    "rating": 3.9,
+    "reviews": 8,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769999%2Fproduct%2FYellow-Sw-eet-Corn-Bag-each-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 445,
+    "description": "Sweet and tender corn cobs perfect for boiling and grilling.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Pineapple Imported",
+    "price": "$30.00",
+    "oldPrice": "$46.34",
+    "discount": "30 % Off",
+    "rating": 3.8,
+    "reviews": 6,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769658%2Fproduct%2FPineapple-1-5lb-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-fruit",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 365,
+    "description": "Sweet imported pineapple rich in vitamin C and fiber.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Dates Loose",
+    "price": "$160.00",
+    "discount": "43 % Off",
+    "rating": 4.3,
+    "reviews": 12,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738773409%2Fproduct%2FDates-Khejur-Lulu-Loose-Kg-removebg-preview.png&w=3840&q=75",
+    "category": "dry-fruits",
+    "stock": 840,
+    "description": "Premium quality loose dates — naturally sweet and rich in energy.",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Organic Pinkerton Avocado",
+    "price": "$55.20",
+    "discount": "18 % Off",
+    "rating": 3.5,
+    "reviews": 7,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769921%2Fproduct%2FOrganic-Pinkerton-Avocado-each-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-fruit",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 620,
+    "description": "Fresh whole coconut with sweet, hydrating water and tender flesh.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Green Beans",
+    "price": "$45.70",
+    "rating": 3.9,
+    "reviews": 5,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738770041%2Fproduct%2FGreen-Cauliflower-12ct-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 720,
+    "description": "Crisp and tender green beans perfect for stir-fries and soups.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Red Grapes",
+    "price": "$75.00",
+    "rating": 4.1,
+    "reviews": 9,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738768919%2Fproduct%2FRainbow-Chard-Package-per-lb-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-fruit",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 500,
+    "description": "Juicy red grapes — sweet, seedless, and full of antioxidants.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  }
+]

@@ -1,0 +1,507 @@
+[
+  {
+    "id": 1,
+    "name": "Rainbow Chard",
+    "price": "$7.07",
+    "oldPrice": "",
+    "discount": "",
+    "rating": 3.3,
+    "reviews": 6,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738768919%2Fproduct%2FRainbow-Chard-Package-per-lb-removebg-preview.png&w=3840&q=75",
+    "description": "Fresh mint leaves for cooking, tea, and garnish.",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Kale Sprouts",
+    "price": "$90.00",
+    "oldPrice": "$106.06",
+    "discount": "15 % Off",
+    "rating": 3.3,
+    "reviews": 3,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769047%2Fproduct%2FKale-Sprouts-3oz-removebg-preview.png&w=3840&q=75",
+    "description": "Fresh mint leaves for cooking, tea, and garnish.",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Rainbow Peppers",
+    "price": "$90.85",
+    "oldPrice": "",
+    "discount": "",
+    "rating": 0.0,
+    "reviews": 0,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769097%2Fproduct%2FRainbow-Peppers-4ct-removebg-preview.png&w=3840&q=75",
+    "description": "Fresh mint leaves for cooking, tea, and garnish.",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Calabaza Squash",
+    "price": "$98.03",
+    "oldPrice": "",
+    "discount": "",
+    "rating": 3.0,
+    "reviews": 6,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769215%2Fproduct%2FCalabaza-Squash-Package-each-removebg-preview%25281%2529.png&w=3840&q=75",
+    "description": "Fresh mint leaves for cooking, tea, and garnish.",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Lettuce",
+    "price": "$193.26",
+    "oldPrice": "",
+    "discount": "",
+    "rating": 4.0,
+    "reviews": 5,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769251%2Fproduct%2FLettuce-1lb-removebg-preview.png&w=3840&q=75",
+    "description": "Fresh mint leaves for cooking, tea, and garnish.",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Radicchio",
+    "price": "$45.00",
+    "oldPrice": "$58.66",
+    "discount": "23 % Off",
+    "rating": 2.5,
+    "reviews": 2,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769310%2Fproduct%2FRadicchio-12ct-removebg-preview.png&w=3840&q=75",
+    "description": "Fresh mint leaves for cooking, tea, and garnish.",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Parsley",
+    "price": "$134.63",
+    "oldPrice": "",
+    "discount": "",
+    "rating": 1.0,
+    "reviews": 1,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769346%2Fproduct%2FParsley-each-removebg-preview%25281%2529.png&w=3840&q=75",
+    "description": "Fresh mint leaves for cooking, tea, and garnish.",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Cauliflower",
+    "price": "$139.15",
+    "oldPrice": "",
+    "discount": "",
+    "rating": 2.4,
+    "reviews": 7,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769405%2Fproduct%2FCauliflower-1-35lb-removebg-preview.png&w=3840&q=75",
+    "description": "Fresh mint leaves for cooking, tea, and garnish.",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Organic Purple Cauliflower",
+    "price": "$19.57",
+    "oldPrice": "",
+    "discount": "",
+    "rating": 0.0,
+    "reviews": 0,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769442%2Fproduct%2FOrganic-Purple-Cauliflower-1lb-removebg-preview.png&w=3840&q=75",
+    "description": "Fresh mint leaves for cooking, tea, and garnish.",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Ahold Acorn Squash",
+    "price": "$71.18",
+    "oldPrice": "",
+    "discount": "",
+    "rating": 2.3,
+    "reviews": 7,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769470%2Fproduct%2FAhold-Acorn-Squash-1ct-removebg-preview.png&w=3840&q=75",
+    "description": "Fresh mint leaves for cooking, tea, and garnish.",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Bok Choy Cabbage",
+    "price": "$247.39",
+    "oldPrice": "",
+    "discount": "",
+    "rating": 2.8,
+    "reviews": 6,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769498%2Fproduct%2FBok-Choy-Cabbage-per-lb-removebg-preview.png&w=3840&q=75",
+    "description": "Fresh mint leaves for cooking, tea, and garnish.",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Aloe Vera Leaf",
+    "price": "$157.00",
+    "oldPrice": "",
+    "discount": "",
+    "rating": 2.3,
+    "reviews": 3,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769612%2Fproduct%2FAloe-Vera-Leaf-each-removebg-preview.png&w=3840&q=75",
+    "description": "Fresh mint leaves for cooking, tea, and garnish.",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  }
+]

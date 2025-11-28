@@ -1,0 +1,58 @@
+[
+
+  {
+    "title": "Fish & Meat",
+    "icon": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1658340705%2Fcategory%2520icon%2Fcarp-fish_paxzrt.png&w=96&q=75",
+    "items": ["Fish", "Meat"]
+  },
+  {
+    "title": "Fruits & Vegetable",
+    "icon": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1658340704%2Fcategory%2520icon%2Fcabbage_n59uv3.png&w=96&q=75",
+    "items": ["Baby Food", "Fresh Fruits", "Dry Fruits"]
+  },
+  {
+    "title": "Cooking Essentials",
+    "icon": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1658340704%2Fcategory%2520icon%2Ffrying-pan_vglm5c.png&w=96&q=75",
+    "items": ["Flour", "Oil"]
+  },
+  {
+    "title": "Biscuits & Cakes",
+    "icon": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1658340705%2Fcategory%2520icon%2Fcookie_1_ugipqa.png&w=96&q=75",
+    "items": ["Biscuits", "Cakes"]
+  },
+  {
+    "title": "Household Tools",
+    "icon": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1658340706%2Fcategory%2520icon%2Fspray_pebsjt.png&w=96&q=75",
+    "items": ["Water Filter", "Cleaning Tools", "Pest Control"]
+  },
+  {
+    "title": "Pet Care",
+    "icon": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1658340707%2Fcategory%2520icon%2Fcat_tznwmq.png&w=96&q=75",
+    "items": ["Dog Care", "Cat Care"]
+  },
+  {
+    "title": "Beauty & Healths",
+    "icon": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1658340706%2Fcategory%2520icon%2Fbeauty_vfbmzc.png&w=96&q=75",
+    "items": ["Women", "Men"]
+  },
+  {
+    "title": "Jam & Jelly",
+    "icon": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FrmLvfsMC%2Fstrawberry-jam-1.png&w=96&q=75",
+    "items": []
+  },
+  {
+    "title": "Milk & Dairy",
+    "icon": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1658340706%2Fcategory%2520icon%2Fmilk_dcl0dr.png&w=96&q=75",
+    "items": ["Butter & Ghee", "Ice Cream", "Dairy"]
+  },
+  {
+    "title": "Drinks",
+    "icon": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1658340705%2Fcategory%2520icon%2Fjuice_p5gv5k.png&w=96&q=75",
+    "items": ["Tea", "Water", "Juice"]
+  },
+  {
+    "title": "Breakfast",
+    "icon": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1658340705%2Fcategory%2520icon%2Fbagel_mt3fod.png&w=96&q=75",
+    "items": ["Bread", "Cereal"]
+  }
+]

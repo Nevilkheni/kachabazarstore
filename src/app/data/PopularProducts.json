@@ -1,0 +1,762 @@
+[
+  {
+    "id": 1,
+    "name": "Mint",
+    "price": "$30.78",
+    "rating": 2.9,
+    "reviews": 7,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738770585%2Fproduct%2FMint-6-5ct-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 718,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Premium T-Shirt",
+    "price": "$450.00",
+    "rating": 3.6,
+    "reviews": 9,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738768427%2Fproduct%2F60c88fa9379ac-square-removebg-preview.png&w=3840&q=75",
+    "category": "Man",
+    "subcategory": ["premium-shirt", "t-shirt", "new-t-shirt"],
+    "stock": 256,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Clementine",
+    "price": "$48.12",
+    "rating": 3.2,
+    "reviews": 10,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738768992%2Fproduct%2FClementine-5ct-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-fruit",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 932,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Lettuce",
+    "price": "$193.26",
+    "rating": 4.0,
+    "reviews": 5,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769251%2Fproduct%2FLettuce-1lb-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 614,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Calabaza Squash",
+    "price": "$98.03",
+    "rating": 3.6,
+    "reviews": 6,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769215%2Fproduct%2FCalabaza-Squash-Package-each-removebg-preview%25281%2529.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 780,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Organic Baby Carrot",
+    "price": "$150.00",
+    "oldPrice": "$168.23",
+    "discount": "11 % Off",
+    "rating": 4.1,
+    "reviews": 8,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738770398%2Fproduct%2FOrganic-Baby-Carrot-1oz-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 1050,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Organic Cherry Tomato",
+    "price": "$15.56",
+    "rating": 2.8,
+    "reviews": 6,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738770456%2Fproduct%2FOrange-Cherry-Tomato-5qt-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 546,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Atlantic Salmon",
+    "price": "$10.36",
+    "rating": 2.5,
+    "reviews": 6,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1655097002%2Fplaceholder_kvepfp.png&w=3840&q=",
+    "category": "seafood",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 233,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Yellow Sweet Corn",
+    "price": "$80.97",
+    "rating": 3.9,
+    "reviews": 8,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769999%2Fproduct%2FYellow-Sw-eet-Corn-Bag-each-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 445,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Pineapple Imported",
+    "price": "$30.00",
+    "oldPrice": "$46.34",
+    "discount": "35 % Off",
+    "rating": 3.8,
+    "reviews": 6,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769658%2Fproduct%2FPineapple-1-5lb-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-fruit",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 365,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Dates Loose",
+    "price": "$160.00",
+    "rating": 4.3,
+    "reviews": 12,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738773409%2Fproduct%2FDates-Khejur-Lulu-Loose-Kg-removebg-preview.png&w=3840&q=75",
+    "category": "dry-fruits",
+    "stock": 840,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Organic Pinkerton Avocado",
+    "price": "$55.20",
+    "rating": 3.5,
+    "reviews": 7,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738769921%2Fproduct%2FOrganic-Pinkerton-Avocado-each-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-fruit",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 620,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Green Beans",
+    "price": "$45.70",
+    "rating": 3.9,
+    "reviews": 5,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738770041%2Fproduct%2FGreen-Cauliflower-12ct-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 720,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Red Grapes",
+    "price": "$75.00",
+    "rating": 4.1,
+    "reviews": 9,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738768919%2Fproduct%2FRainbow-Chard-Package-per-lb-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-fruit",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 500,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Raw Almonds",
+    "price": "$200.00",
+    "rating": 4.5,
+    "reviews": 14,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738773208%2Fproduct%2FFresh-Dates-Package-10oz-removebg-preview.png&w=3840&q=75",
+    "category": "dry-fruits",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 410,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Organic Apple",
+    "price": "$60.00",
+    "rating": 4.0,
+    "reviews": 11,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738770181%2Fproduct%2FOrganic-Green-Cauliflower-1lb-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-fruit",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 940,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Fresh Broccoli",
+    "price": "$55.00",
+    "rating": 4.2,
+    "reviews": 8,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738768876%2Fproduct%2FGreen-Leaf-Lettuce-each__1_-removebg-preview%25281%2529.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 600,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Escarole",
+    "price": "$40.00",
+    "rating": 3.7,
+    "reviews": 5,
+    "image": "https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fahossain%2Fimage%2Fupload%2Fv1738773078%2Fproduct%2FEscarole-1ct-removebg-preview.png&w=3840&q=75",
+    "category": "fresh-vegetable",
+    "subcategory": ["fresh fruits", "fruits", "vegetable"],
+    "stock": 520,
+    "description": "Most fresh vegetables are low in calories and have a water content in excess of 70 percent, with only about 3.5 percent protein and less than 1 percent fat. ... The root vegetables include beets, carrots, radishes, sweet potatoes, and turnips. Stem vegetables include asparagus and kohlrabi.",
+    "highlights": [
+      {
+        "text": "Free shipping applies to all orders over shipping €100",
+        "icon": "/public/assets/truck.svg"
+      },
+      {
+        "text": "Home Delivery within 1 Hour",
+        "icon": "/public/assets/home.svg"
+      },
+      {
+        "text": "Cash on Delivery Available",
+        "icon": "/public/assets/doller.svg"
+      },
+      {
+        "text": "7 Days returns money back guarantee",
+        "icon": "/public/assets/returen.svg"
+      },
+      {
+        "text": "Warranty not available for this item",
+        "icon": "/public/assets/warranty.svg"
+      },
+      {
+        "text": "Guaranteed 100% organic from natural products",
+        "icon": "/public/assets/sun.svg"
+      },
+      {
+        "text": "Delivery from our pick point Boho One, Bridge Street West, Middlesbrough, North Yorkshire, TS2 1AE",
+        "icon": "/public/assets/location.svg"
+      }
+    ]
+  }
+]

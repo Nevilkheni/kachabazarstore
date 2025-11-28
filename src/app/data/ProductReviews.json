@@ -1,0 +1,53 @@
+[
+  {
+    "productId": 1,
+    "reviews": [
+      {
+        "name": "Mousa",
+        "date": "8/22/2025",
+        "rating": 5,
+        "comment": "",
+        "avatar": "https://randomuser.me/api/portraits/women/68.jpg",
+        "images": []
+      },
+      {
+        "name": "Anum Naz",
+        "date": "8/16/2025",
+        "rating": 2,
+        "comment": "The product broke after first use.",
+        "avatar": "https://randomuser.me/api/portraits/women/32.jpg",
+        "images": [
+          "https://cdn-icons-png.flaticon.com/128/415/415733.png",
+          "https://cdn-icons-png.flaticon.com/128/415/415734.png",
+          "https://cdn-icons-png.flaticon.com/128/415/415735.png",
+          "https://cdn-icons-png.flaticon.com/128/415/415736.png"
+        ]
+      },
+      {
+        "name": "Davide Crisafulli",
+        "date": "8/16/2025",
+        "rating": 1,
+        "comment": "It does the job, but nothing stands out.",
+        "avatar": "",
+        "images": [
+          "https://cdn-icons-png.flaticon.com/128/415/415733.png",
+          "https://cdn-icons-png.flaticon.com/128/415/415734.png",
+          "https://cdn-icons-png.flaticon.com/128/415/415735.png"
+        ]
+      }
+    ]
+  },
+  {
+    "productId": 2,
+    "reviews": [
+      {
+        "name": "Ali Khan",
+        "date": "9/01/2025",
+        "rating": 4,
+        "comment": "Good product overall, packaging could be better.",
+        "avatar": "https://randomuser.me/api/portraits/men/35.jpg",
+        "images": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* 🎨 Font stacks */
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #ededed;
+    /* --background: #0a0a0a; */
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* ============================
+   🧭 Custom Scrollbar Styles
+   ============================ */
+
+/* Works in Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+  /* vertical scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* track color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d6d4d4, #d6d4d4);
+  border-radius: 10px;
+  padding: 1px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #aaaeb5, #aaaeb5);
+}
+
+/* Optional: Dark mode */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background: #ffffff; /* dark gray */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #d6d4d4, #d6d4d4);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #aaaeb5, #aaaeb5);
+  }
+}
+
+/* Hide horizontal scrollbar, if you want */
+body {
+  overflow-x: hidden;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+}
