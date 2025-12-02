@@ -77,7 +77,12 @@ export default function Login() {
           <span className="text-black font-sans font-medium text-md">OR</span>
         </div>
         <div className="flex flex-col gap-6 mr-2">
-          <button className="w-full text-sm font-medium font-sans flex items-center justify-center gap-4 bg-[#00A550] hover:bg-[#009647] text-white py-2.5 rounded-md transition">
+          <button
+            onClick={() =>
+              (window.location.href = "http://localhost:8000/auth/google")
+            }
+            className="w-full text-sm font-medium font-sans flex items-center justify-center gap-4 bg-[#00A550] hover:bg-[#009647] text-white py-2.5 rounded-md transition"
+          >
             <FaGoogle className="text-lg rounded-full  " />
             Login With Google
           </button>
@@ -94,7 +99,7 @@ export default function Login() {
         </div>
         <p className="text-center text-sm text-gray-500 mt-10">
           Don’t have an account?{" "}
-          <Link href="/signup" className="text-black font-sans font-bold">
+          <Link href="./singup" className="text-black font-sans font-bold">
             {""}Sign Up
           </Link>
         </p>
