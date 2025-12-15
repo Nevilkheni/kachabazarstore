@@ -1,8 +1,8 @@
-import DownloadAppSection from "./DownloadAppSection/page";
-import FeaturedCategories from "./FeaturedCategories/page";
 import Hero from "./herosection/page";
-import LatestProducts from "./LatestProducts.jsx/page";
-import PopularProducts from "./PopularProducts/page";
+import DownloadAppSection from "./downloadappSection/page";
+import FeaturedCategories from "./featuredcategories/page";
+import LatestProducts from "./latestproducts.jsx/page";
+import PopularProducts from "./popularproducts/page";
 
 export default function Herosection() {
   return (
@@ -11,7 +11,7 @@ export default function Herosection() {
       <FeaturedCategories />
       <PopularProducts />
       <DownloadAppSection />
-      <LatestProducts />    
+      <LatestProducts />
     </>
   );
 }

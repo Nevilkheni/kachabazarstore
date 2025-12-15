@@ -1,5 +1,5 @@
 "use client";
-import KachaBazarshop from "./KachaBazarshop/page";
+import KachaBazarshop from "./kachabazarshop/page";
 
 export default function AboutPage() {
   return (
@@ -17,7 +17,6 @@ export default function AboutPage() {
           </h1>
         </div>
       </div>
-
       <KachaBazarshop />
     </section>
   );

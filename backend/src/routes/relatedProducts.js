@@ -4,7 +4,7 @@ import { getModelForFile } from "../models/GenericItem.js";
 const router = express.Router();
 const Model = getModelForFile("relatedproducts");
 
-router.get("/api/related-products", async (req, res) => {
+router.get("/api/relatedproducts", async (req, res) => {
     try {
         const docs = await Model.find({});
         res.json(docs);

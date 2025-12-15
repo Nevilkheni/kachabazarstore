@@ -1,5 +1,3 @@
-"use client";
-
 import Privacypolicydescription from "./description/page";
 
 export default function Privacypolicypage() {

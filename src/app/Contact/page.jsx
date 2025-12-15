@@ -1,6 +1,6 @@
 "use client";
-import ContactInfo from "./ContactInfo/page";
-import ContactFormSection from "./ContactFormSection/page";
+import ContactInfo from "./contactInfo/page";
+import ContactFormSection from "./contactformsection/page";
 
 export default function Contactpage() {
   return (

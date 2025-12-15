@@ -1,4 +1,4 @@
-import Coupons from "./Coupon/page";
+import Coupons from "./coupon/page";
 import HeroSlider from "./heroslider/page";
 
 export default function Hero() {

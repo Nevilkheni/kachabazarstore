@@ -14,7 +14,12 @@ export default function Singup() {
           Get started - its free.
         </p>
         <div className="flex flex-col gap-6 mr-2">
-          <button className="w-full text-sm font-medium font-sans flex items-center justify-center gap-4 bg-[#00A550] hover:bg-[#009647] text-white py-2.5 rounded-md transition">
+          <button
+            onClick={() =>
+              (window.location.href = `${process.env.NEXT_PUBLIC_GOOGLE_BACKEND_PORT}/auth/google`)
+            }
+            className="w-full text-sm font-medium font-sans flex items-center justify-center gap-4 bg-[#00A550] hover:bg-[#009647] text-white py-2.5 rounded-md transition"
+          >
             <FaGoogle className="text-lg rounded-full  " />
             Sign Up With Google
           </button>
@@ -24,7 +29,12 @@ export default function Singup() {
             Sign Up With Facebook
           </button>
 
-          <button className="w-full flex text-sm font-medium font-sans items-center justify-center gap-4 bg-[#343A40] hover:bg-[#2d3237] text-white py-2.5 rounded-md  transition">
+          <button
+            onClick={() =>
+              (window.location.href = `${process.env.NEXT_PUBLIC_GITHUB_BACKEND_PORT}/auth/github`)
+            }
+            className="w-full flex text-sm font-medium font-sans items-center justify-center gap-4 bg-[#343A40] hover:bg-[#2d3237] text-white py-2.5 rounded-md  transition"
+          >
             <FaGithub className="text-[18px]" />
             Sign Up With Github
           </button>

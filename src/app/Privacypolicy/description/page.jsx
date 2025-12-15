@@ -1,5 +1,3 @@
-"use client";
-
 export default function Privacypolicydescription() {
   return (
     <section className="bg-white w-full px-4 sm:px-10">
@@ -41,13 +39,13 @@ export default function Privacypolicydescription() {
           Information we collect
         </h2>
         <p className=" text-base opacity-90 leading-6 text-gray-900 mb-4">
-          personal information that you are asked to provide, and the reasons
-          why you are asked to provide it, will be made clear to you at the
-          point we ask you to provide your personal information. If you contact
-          us directly, we may receive additional information about you such may
-          choose to provide. When you register for an Account, we may ask for
-          your contact information, including items such as name, company name,
-          address, email address, and telephone number.
+          The personal information that you are asked to provide, and the
+          reasons why you are asked to provide it, will be made clear to you at
+          the point we ask you to provide your personal information. If you
+          contact us directly, we may receive additional information about you
+          such may choose to provide. When you register for an Account, we may
+          ask for your contact information, including items such as name,
+          company name, address, email address, and telephone number.
         </p>
         <p className=" text-base opacity-90 leading-6 text-gray-900 mb-4">
           Please note that the Company will not ask you to share any sensitive

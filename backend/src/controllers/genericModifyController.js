@@ -1,7 +1,26 @@
-
 import { getModelForFile } from "../models/GenericItem.js";
 
-// ===================================================================
+export const getItem = async (req, res) => {
+    try {
+        const { file, id } = req.params;
+        if (!file) {
+            return res.status(400).json({ msg: "file param missing" });
+        }
+        const Model = getModelForFile(file.toLowerCase());
+
+        const item = await Model.findById(id);
+
+        if (!item) {
+            return res.status(404).json({ msg: "item not found", id });
+        }
+
+        res.json(item);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ msg: "server error", error: err.message });
+    }
+};
+
 export const removeItem = async (req, res) => {
     try {
         const { file, id } = req.params;
@@ -10,7 +29,7 @@ export const removeItem = async (req, res) => {
         }
         const Model = getModelForFile(file.toLowerCase());
 
-        const deleted = await Model.findOneAndDelete({ id });
+        const deleted = await Model.findByIdAndDelete(id);
 
         if (!deleted) {
             return res.status(404).json({ msg: "id missing", id });
@@ -23,7 +42,6 @@ export const removeItem = async (req, res) => {
     }
 };
 
-// ===================================================================
 export const updateItem = async (req, res) => {
     try {
         const { file, id } = req.params;
@@ -32,8 +50,8 @@ export const updateItem = async (req, res) => {
         }
         const Model = getModelForFile(file.toLowerCase());
 
-        const updated = await Model.findOneAndUpdate(
-            { id },
+        const updated = await Model.findByIdAndUpdate(
+            id,
             { $set: req.body },
             { new: true }
         );
@@ -49,7 +67,6 @@ export const updateItem = async (req, res) => {
     }
 };
 
-// ===================================================================
 export const replaceItem = async (req, res) => {
     try {
         const { file, id } = req.params;
@@ -58,9 +75,10 @@ export const replaceItem = async (req, res) => {
         }
         const Model = getModelForFile(file.toLowerCase());
 
-        const replaced = await Model.findOneAndUpdate(
-            { id },
-            { id, ...req.body },
+        const { _id, id: bodyId, ...rest } = req.body;
+        const replaced = await Model.findByIdAndUpdate(
+            id,
+            { ...rest },
             { new: true, upsert: false }
         );
 
@@ -75,7 +93,6 @@ export const replaceItem = async (req, res) => {
     }
 };
 
-// ===================================================================
 export const addItem = async (req, res) => {
     try {
         const { file } = req.params;
@@ -85,9 +102,7 @@ export const addItem = async (req, res) => {
         const Model = getModelForFile(file.toLowerCase());
 
         delete req.body._id;
-
-        const id = req.body.id ?? Date.now().toString();
-        const item = await Model.create({ id, ...req.body });
+        const item = await Model.create(req.body);
 
         res.status(201).json({ msg: "item added", item });
     } catch (err) {

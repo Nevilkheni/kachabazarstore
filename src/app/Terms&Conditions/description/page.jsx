@@ -1,5 +1,4 @@
 "use client";
-
 export default function TermsConditionsdescription() {
   return (
     <section className="bg-white w-full px-4 sm:px-10">

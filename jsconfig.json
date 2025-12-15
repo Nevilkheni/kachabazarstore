@@ -5,8 +5,10 @@
       "@/*": ["src/*"],
       "@/app/*": ["src/app/*"],
       "@/components/*": ["src/components/*"],
-      "@/redux/*": ["src/app/redux/*"],
-      "@/api/*": ["src/app/api/*"]
+      "@/redux/*": ["src/redux/*"],
+      "@/api/*": ["src/api/*"]
+      
     }
-  }
+  },
+  "exclude": ["backend", "node_modules"]
 }

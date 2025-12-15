@@ -44,7 +44,7 @@ export default function HeroSlider() {
     const interval = setInterval(() => {
       setDirection(1);
       setIndex((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -78,7 +78,7 @@ export default function HeroSlider() {
             animate="center"
             exit="exit"
             transition={{
-              x: { type: "tween", ease: "easeInOut", duration: 1 },
+              x: { type: "tween", ease: "easeInOut", duration: 0.5 },
             }}
             className="absolute inset-0 w-full h-full"
           >

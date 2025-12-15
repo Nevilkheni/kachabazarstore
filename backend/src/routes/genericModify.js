@@ -3,9 +3,11 @@ import { removeItem, updateItem, replaceItem, addItem } from "../controllers/gen
 
 const router = express.Router();
 
-router.delete("/api/:file/:id", removeItem);
-router.patch("/api/:file/:id", updateItem);
-router.put("/api/:file/:id", replaceItem);
-router.post("/api/:file", addItem);
+router.delete("/:file/:id", removeItem);
+router.patch("/:file/:id", updateItem);
+router.put("/:file/:id", replaceItem);
+router.post("/:file", addItem);
+
 
 export default router;
+

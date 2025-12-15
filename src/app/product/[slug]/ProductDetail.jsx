@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { LuHeadphones } from "react-icons/lu";
@@ -10,8 +9,8 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { RiFacebookCircleFill } from "react-icons/ri";
 import { IoLogoInstagram } from "react-icons/io";
 import { RiTwitterXFill } from "react-icons/ri";
-import ReviewDescription from "@/app/components/ReviewDescription";
-import RelatedProducts from "@/app/home/RelatedProducts.jsx/page";
+import RelatedProducts from "@/app/home/relatedproducts.jsx/page";
+import ReviewDescription from "../reviewdescription/page";
 
 export default function ProductDetail({ product }) {
   const [count, setCount] = useState(1);

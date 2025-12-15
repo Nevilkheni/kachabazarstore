@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import { CiMail } from "react-icons/ci";
 import { LuLock } from "react-icons/lu";
 import { FaGoogle } from "react-icons/fa";
@@ -7,15 +6,6 @@ import { FaFacebookF, FaGithub } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Email:", email);
-    console.log("Password:", password);
-  };
-
   return (
     <div className=" p-3  sm:p-9 lg:p-12 flex items-center justify-center bg-[#f7f8f9]">
       <div className="bg-white w-full max-w-lg rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.08)] p-5 sm:p-10 ">
@@ -26,7 +16,7 @@ export default function Login() {
           Login with your email and password
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-4 ">
+        <form className="space-y-4 ">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Email
@@ -38,8 +28,6 @@ export default function Login() {
               <input
                 type="email"
                 required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
                 placeholder="justin@gmail.com"
                 className="w-full border rounded-md py-2 text-sm pl-10 pr-3 border-gray-200 text-black focus:outline-none focus:ring-1 focus:ring-gray-500"
               />
@@ -57,8 +45,6 @@ export default function Login() {
               <input
                 type="password"
                 required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
                 placeholder="•••••••"
                 className="w-full border rounded-md py-2 text-sm pl-10 pr-3 border-gray-200 text-black focus:outline-none focus:ring-1 focus:ring-gray-500"
               />
@@ -79,7 +65,7 @@ export default function Login() {
         <div className="flex flex-col gap-6 mr-2">
           <button
             onClick={() =>
-              (window.location.href = "http://localhost:8000/auth/google")
+              (window.location.href = `${process.env.NEXT_PUBLIC_GOOGLE_BACKEND_PORT}/auth/google`)
             }
             className="w-full text-sm font-medium font-sans flex items-center justify-center gap-4 bg-[#00A550] hover:bg-[#009647] text-white py-2.5 rounded-md transition"
           >
@@ -92,7 +78,12 @@ export default function Login() {
             Login With Facebook
           </button>
 
-          <button className="w-full flex text-sm font-medium font-sans items-center justify-center gap-4 bg-[#343A40] hover:bg-[#2d3237] text-white py-2.5 rounded-md  transition">
+          <button
+            onClick={() =>
+              (window.location.href = `${process.env.NEXT_PUBLIC_GITHUB_BACKEND_PORT}/auth/github`)
+            }
+            className="w-full flex text-sm font-medium font-sans items-center justify-center gap-4 bg-[#343A40] hover:bg-[#2d3237] text-white py-2.5 rounded-md  transition"
+          >
             <FaGithub className="text-[18px]" />
             Login With Github
           </button>
