@@ -16,6 +16,7 @@ import latestProducts from "./routes/latestProducts.js";
 import popularProducts from "./routes/popularProducts.js";
 import productReviews from "./routes/productReviews.js";
 import relatedProducts from "./routes/relatedProducts.js";
+import search from "./routes/search.js";
 import genericModify from "./routes/genericModify.js";
 import couponRoutes from "./routes/coupon.js";
 import session from "express-session";
@@ -67,6 +68,7 @@ app.use(latestProducts);
 app.use(popularProducts);
 app.use(productReviews);
 app.use(relatedProducts);
+app.use(search);
 app.use("/api/coupons", couponRoutes);
 
 app.use("/api/paypal", paypalRoutes);

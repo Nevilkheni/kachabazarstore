@@ -8,6 +8,7 @@ import ShoppingCart from "../global/ShoppingCart";
 import LanguageDropdown from "./languagedropdown/page";
 import React, { useState, useRef, useEffect } from "react";
 import { FiSearch, FiUser } from "react-icons/fi";
+import { useRouter } from "next/navigation";
 import { HiOutlineBell } from "react-icons/hi2";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { FiPhoneCall } from "react-icons/fi";
@@ -20,11 +21,12 @@ import { FiShield } from "react-icons/fi";
 import { useDispatch } from "react-redux";
 import { handleLogout } from "../global/logout";
 import { setUser as setReduxUser } from "@/app/redux/userSlice";
-
 export default function Mainheader() {
   const [openCategory, setOpenCategory] = useState(false);
   const { totalItems } = useSelector((state) => state.cart);
   const [openUserMenu, setOpenUserMenu] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
 
   const categoryRef = useRef(null);
   const userMenuRef = useRef(null);
@@ -70,6 +72,19 @@ export default function Mainheader() {
 
   const [openPages, setOpenPages] = useState(false);
   const pagesRef = useRef(null);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/search?query=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch(e);
+    }
+  };
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -155,14 +170,19 @@ export default function Mainheader() {
           </div>
 
           <div className="w-full  sm:mr-1 px-7 sm:px-6 md:px-14 lg:px-16 xl:px-10">
-            <div className="flex  items-center pt-3 sm:pt-[11px] bg-white rounded-lg  pb-2 sm:pb-[9px]  mb-2 justify-between  ">
+            <form onSubmit={handleSearch} className="flex  items-center pt-3 sm:pt-[11px] bg-white rounded-lg  pb-2 sm:pb-[9px]  mb-2 justify-between  ">
               <input
                 type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyPress={handleKeyPress}
                 placeholder="Search for products (e.g. shirt, pant)"
                 className="flex  pl-5  w-full text-sm  font-sans outline-none text-gray-900 placeholder:text-gray-500"
               />
-              <FiSearch className=" text-gray-400 mr-4 sm:mr-5  text-xl sm:text-[19px] " />
-            </div>
+              <button type="submit" className="mr-4 sm:mr-5">
+                <FiSearch className=" text-gray-400 text-xl -mt-0.5 sm:text-[18.5px] " />
+              </button>
+            </form>
           </div>
 
           <div className="hidden sm:flex items-center shrink-0  text-[22px]">
