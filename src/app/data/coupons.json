@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "64f001a1c01a1a001a000001",
+    "title": "Summer Gift Voucher",
+    "image": "https://i.ibb.co/4thS4Z1/ins2.jpg",
+    "discountPercent": 10,
+    "code": "SUMMER24",
+    "minPurchase": 100,
+    "status": "Active",
+    "expiryDate": "2025-06-30T23:59:59.000Z"
+  },
+  {
+    "_id": "64f001a1c01a1a001a000002",
+    "title": "Mega Deal Voucher",
+    "image": "https://i.ibb.co/23kQcB9/ins3.jpg",
+    "discountPercent": 50,
+    "code": "MEGA50",
+    "minPurchase": 50,
+    "status": "Active",
+    "expiryDate": "2025-05-15T23:59:59.000Z"
+  },
+  {
+    "_id": "64f001a1c01a1a001a000003",
+    "title": "New User Special",
+    "image": "https://i.ibb.co/j5RzZ9k/ins1.jpg",
+    "discountPercent": 20,
+    "code": "NEW20",
+    "minPurchase": 30,
+    "status": "Active",
+    "expiryDate": "2025-12-31T23:59:59.000Z"
+  },
+  {
+    "_id": "64f001a1c01a1a001a000004",
+    "title": "Flash Sale",
+    "image": "https://i.ibb.co/4thS4Z1/ins2.jpg",
+    "discountPercent": 25,
+    "code": "FLASH25",
+    "minPurchase": 20,
+    "status": "Active",
+    "expiryDate": "2025-03-31T23:59:59.000Z"
+  }
+]

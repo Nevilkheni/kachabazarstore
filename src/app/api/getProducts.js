@@ -1,6 +1,8 @@
+import { getApiUrl } from '@/utils/apiConfig';
+
 // const categoryAPI = "https://gist.githubusercontent.com/Nevilkheni/a0b3e4a431e7fa164f86fc3265fe3cbc/raw/categories.json";
 // const categoryAPI = "http://localhost:3001/api/categories"
-const categoryAPI = process.env.NEXT_PUBLIC_API_URL + "/api/categories";
+const categoryAPI = getApiUrl() + "/api/categories";
 export async function getcategory() {
     try {
         const res = await fetch(categoryAPI, { cache: "no-store" });
@@ -16,8 +18,7 @@ export async function getcategory() {
 // const popularAPI = "https://69141c12f34a2ff1170e3233.mockapi.io/PopularProducts";
 // const popularAPI = "https://gist.githubusercontent.com/Nevilkheni/bbf931f6fe6356e8a029ff29fb22da4a/raw/PopularProductsdata";
 // const popularAPI = "http://localhost:3001/api/popular-products";
-const popularAPI = process.env.NEXT_PUBLIC_API_URL + "/api/popularproducts";
-
+const popularAPI = getApiUrl() + "/api/popularproducts";
 export async function getPopularProducts() {
     try {
         const res = await fetch(popularAPI, { cache: "no-store" });
@@ -30,11 +31,10 @@ export async function getPopularProducts() {
 }
 
 
-// const latestAPI = "https://69141c12f34a2ff1170e3233.mockapi.io/LatestProducts";
+// const latestAPI = "https://69141c12f34a2ff1170e3233.mockapi.io   /LatestProducts";
 // const latestAPI = "https://gist.githubusercontent.com/Nevilkheni/6004125f9a4a62055c6d356509f93690/raw/latestproducts";
 // const latestAPI = "http://localhost:3001/api/latest-products";
-const latestAPI = process.env.NEXT_PUBLIC_API_URL + "/api/latestproducts";
-
+const latestAPI = getApiUrl() + "/api/latestproducts";
 export async function getLatestProducts() {
     try {
         const res = await fetch(latestAPI, { cache: "no-store" });
@@ -48,8 +48,7 @@ export async function getLatestProducts() {
 
 
 // const relatedproductAPI = "http://localhost:3001/api/related-products";
-const relatedproductAPI = process.env.NEXT_PUBLIC_API_URL + "/api/relatedproducts";
-
+const relatedproductAPI = getApiUrl() + "/api/relatedproducts";
 export async function getRelatedProducts() {
     try {
         const res = await fetch(relatedproductAPI, { cache: "no-store" });
@@ -63,8 +62,7 @@ export async function getRelatedProducts() {
 
 
 // const reviewsAPI = "http://localhost:3001/api/product-reviews";
-const reviewsAPI = process.env.NEXT_PUBLIC_API_URL + "/api/productreviews";
-
+const reviewsAPI = getApiUrl() + "/api/productreviews";
 export async function getreviewsData() {
     try {
         const res = await fetch(reviewsAPI, { cache: "no-store" });
@@ -76,3 +74,16 @@ export async function getreviewsData() {
     }
 }
 
+
+const couponsAPI = getApiUrl() + "/api/coupons/getcoupons";
+export async function getCoupons() {
+    try {
+        const res = await fetch(couponsAPI, { cache: "no-store" });
+        if (!res.ok) throw new Error("Failed to fetch coupons");
+        const response = await res.json();
+        return response.data || [];
+    } catch (err) {
+        console.error("getCoupons error:", err);
+        return [];
+    }
+}

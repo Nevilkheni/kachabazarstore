@@ -14,7 +14,7 @@ export default function Mobilebottomheader() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/user`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/auth/user`, {
       method: "GET",
       credentials: "include",
     })
@@ -27,7 +27,6 @@ export default function Mobilebottomheader() {
         return JSON.parse(text);
       })
       .then((data) => {
-        console.log("user:", data);
         setUser(data);
       })
       .catch((err) => console.log("err:", err));

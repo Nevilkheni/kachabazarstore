@@ -5,6 +5,7 @@ import path from "path";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+dotenv.config({ path: path.join(__dirname, "../../.env") });
 dotenv.config({ path: path.join(__dirname, "../.env") });
 
 import express from "express";
@@ -16,20 +17,26 @@ import popularProducts from "./routes/popularProducts.js";
 import productReviews from "./routes/productReviews.js";
 import relatedProducts from "./routes/relatedProducts.js";
 import genericModify from "./routes/genericModify.js";
+import couponRoutes from "./routes/coupon.js";
 import session from "express-session";
 import passport from "passport";
 import "./passport.js";
-import authRoute from "./routes/auth.js";
+import authRoutes from "./routes/auth.js";
+import paypalRoutes from "./routes/paypal.js";
+import orderRoutes from "./routes/orderRoutes.js";
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 
-connectDB();
-
+await connectDB();
 
 app.use(
     cors({
-        origin: process.env.CROS_ORIGIN_URL,
+        origin: [
+            "http://localhost:3000",
+            "http://192.168.1.10:3000",
+            process.env.CROS_ORIGIN_URL
+        ].filter(Boolean),
         credentials: true,
     })
 );
@@ -42,7 +49,9 @@ app.use(
         resave: false,
         saveUninitialized: false,
         cookie: {
-            secure: false,
+            secure: process.env.NODE_ENV === "production",
+            httpOnly: true,
+            sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
             maxAge: 24 * 60 * 60 * 1000,
         },
     })
@@ -58,14 +67,19 @@ app.use(latestProducts);
 app.use(popularProducts);
 app.use(productReviews);
 app.use(relatedProducts);
+app.use("/api/coupons", couponRoutes);
 
-app.use("/auth", authRoute);
-
+app.use("/api/paypal", paypalRoutes);
+app.use("/api", orderRoutes);
+app.use("/auth", authRoutes);
 app.get("/", (req, res) => {
     res.send("Server running with Google login + product API");
 });
 
 app.listen(PORT, () => {
-    console.log("server started ", PORT);
+    console.log(`Server started on port: ${PORT}`);
+    console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+    console.log(`CORS Origin: ${process.env.CROS_ORIGIN_URL || 'http://localhost:3000'}`);
+    console.log(`MongoDB URI: ${process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/kachabazaar'}`);
     console.log("MongoDB connected");
 });

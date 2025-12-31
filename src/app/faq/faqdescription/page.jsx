@@ -44,7 +44,7 @@ export default function DescriptionFAQ() {
   return (
     <div className="bg-white py-10 sm:py-12 px-3 sm:px-10 xl:px-6 ">
       <div className="grid gap-4  max-w-[1456px] mx-auto lg:mb-8 items-center md:grid-cols-2 xl:grid-cols-2">
-        <div className="pr-16">
+        <div className="sm:pr-16">
           <Image
             src="https://res.cloudinary.com/ahossain/image/upload/v1697687955/settings/faq_qr1y1h.svg"
             alt="illustration"

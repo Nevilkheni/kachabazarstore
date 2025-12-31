@@ -74,7 +74,6 @@ body {
   }
 }
 
-/* Hide horizontal scrollbar, if you want */
 body {
   overflow-x: hidden;
 }
@@ -84,6 +83,68 @@ body {
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none; /* for Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes toastProgress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.animate-toast-progress {
+  animation-name: toastProgress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.pdf-safe * {
+  background-color: transparent !important;
+  color: #111827 !important; /* gray-900 */
+  border-color: #e5e7eb !important; /* gray-200 */
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #invoice-pdf,
+  #invoice-pdf * {
+    visibility: visible;
+  }
+
+  #invoice-pdf {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  @page {
+    margin: 0;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* hide buttons */
+  .no-print {
+    display: none !important;
+  }
+}
+
+.pdf-safe * {
+  background-color: transparent !important;
+  color: #111827 !important;
+  border-color: #e5e7eb !important;
 }

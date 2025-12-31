@@ -11,9 +11,16 @@ import { IoLogoInstagram } from "react-icons/io";
 import { RiTwitterXFill } from "react-icons/ri";
 import RelatedProducts from "@/app/home/relatedproducts.jsx/page";
 import ReviewDescription from "../reviewdescription/page";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/app/redux/cartSlice";
 
 export default function ProductDetail({ product }) {
   const [count, setCount] = useState(1);
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addToCart({ ...product, quantity: count }));
+  };
 
   if (!product)
     return (
@@ -101,7 +108,10 @@ export default function ProductDetail({ product }) {
                   <HiPlus />
                 </button>
               </div>
-              <button className="w-full bg-[#00bba7] text-white py-3 font-medium font-sans text-sm rounded-lg hover:bg-[#00978a]">
+              <button
+                onClick={handleAddToCart}
+                className="w-full bg-[#00bba7] text-white py-3 font-medium font-sans text-sm rounded-lg hover:bg-[#00978a]"
+              >
                 Add to Cart
               </button>
             </div>

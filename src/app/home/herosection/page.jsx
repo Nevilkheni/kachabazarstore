@@ -21,7 +21,7 @@ export default function Hero() {
               </p>
             </div>
             <button className="cursor-pointer bg-emerald-500 hover:bg-green-700 text-white font-semibold text-sm rounded-full px-6 my-auto py-2">
-              Shop Now
+              Buy Now
             </button>
           </div>
         </div>

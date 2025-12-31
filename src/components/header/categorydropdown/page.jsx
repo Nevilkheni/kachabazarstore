@@ -6,9 +6,10 @@ import {
   MdOutlineKeyboardArrowRight,
   MdOutlineKeyboardArrowDown,
 } from "react-icons/md";
-import categories from "@/app/data/categories.json";
+import { getcategory } from "@/app/api/getProducts";
 
 export default function CategoryDropdown({ open, onClose, toggleRef }) {
+  const [categories, setCategories] = useState([]);
   const [activeIndexes, setActiveIndexes] = useState([]);
   const dropdownRef = useRef(null);
 
@@ -18,6 +19,14 @@ export default function CategoryDropdown({ open, onClose, toggleRef }) {
       prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
     );
   };
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const data = await getcategory();
+      setCategories(data);
+    };
+    fetchCategories();
+  }, []);
 
   useEffect(() => {
     if (!open) return;

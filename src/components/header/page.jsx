@@ -19,6 +19,7 @@ import { TbSettings } from "react-icons/tb";
 import { FiShield } from "react-icons/fi";
 import { useDispatch } from "react-redux";
 import { handleLogout } from "../global/logout";
+import { setUser as setReduxUser } from "@/app/redux/userSlice";
 
 export default function Mainheader() {
   const [openCategory, setOpenCategory] = useState(false);
@@ -29,14 +30,18 @@ export default function Mainheader() {
   const userMenuRef = useRef(null);
 
   const dispatch = useDispatch();
-
-  const [user, setUser] = useState(null);
+  const user = useSelector((state) => state.user.user);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/user`, {
-      method: "GET",
-      credentials: "include",
-    })
+    if (user) return;
+
+    fetch(
+      `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/auth/user`,
+      {
+        method: "GET",
+        credentials: "include",
+      }
+    )
       .then(async (res) => {
         if (!res.ok) return null;
 
@@ -46,11 +51,12 @@ export default function Mainheader() {
         return JSON.parse(text);
       })
       .then((data) => {
-        console.log("user:", data);
-        setUser(data);
+        if (data) {
+          dispatch(setReduxUser(data));
+        }
       })
       .catch((err) => console.log("err:", err));
-  }, []);
+  }, [user, dispatch]);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -91,7 +97,7 @@ export default function Mainheader() {
             <div className="flex items-center gap-1">
               <FiPhoneCall className="text-xs mb-px" />
               <p className="text-[12px] ml-1 font-sans font-medium">
-                We are available 24/7, Need help?
+                We are available 24/7, Need help??
               </p>
             </div>
             <span className="text-[#0abe82] cursor-pointer font-bold  font-sans text-[12px]">
@@ -108,7 +114,10 @@ export default function Mainheader() {
               Contact Us
             </Link>
             <span className="mx-2">|</span>
-            <Link href="/Auth/login" className="hover:text-emerald-600">
+            <Link
+              href="/dashboard/my-account"
+              className="hover:text-emerald-600"
+            >
               My Account
             </Link>
             <span className="mx-2">|</span>
@@ -158,7 +167,7 @@ export default function Mainheader() {
 
           <div className="hidden sm:flex items-center shrink-0  text-[22px]">
             <div className="relative">
-              <ShoppingCart className="text-[24px] text-gray-700" />
+              <ShoppingCart className="text-[24px]  text-gray-700" />
               {totalItems > 0 && (
                 <span className="absolute -top-2 -right-1 bg-red-500 text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center">
                   {totalItems}
@@ -172,7 +181,7 @@ export default function Mainheader() {
               {user ? (
                 <div>
                   <Image
-                    src={user.avatar}
+                    src={user.avatar || "/public/assets/placeholder_kvepfp.png"}
                     alt="pfp"
                     height={1}
                     width={1}
@@ -189,25 +198,25 @@ export default function Mainheader() {
                         Dashboard
                       </Link>
                       <Link
-                        href="/dashboard"
+                        href="/dashboard/my-orders"
                         className="flex items-center gap-2 px-4  py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors"
                       >
                         <IoReorderThreeSharp className="text-gray-700 text-lg" />
                         My order
                       </Link>
                       <Link
-                        href="/dashboard"
+                        href="/dashboard/update-profile"
                         className="flex items-center gap-2 px-4  py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors"
                       >
                         <TbSettings className="text-gray-700 text-lg" />
                         Update Profile
                       </Link>
                       <Link
-                        href="/"
+                        href="/dashboard/change-password"
                         className="flex items-center gap-2 px-4  py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors"
                       >
                         <FiShield className="text-gray-700 text-lg" />
-                        hange password
+                        Change password
                       </Link>
                     </div>
                   )}

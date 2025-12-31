@@ -5,17 +5,41 @@ import {
   getRelatedProducts,
 } from "@/app/api/getProducts";
 
+export const dynamic = 'force-dynamic';
+
 export default async function ProductPage({ params }) {
   const { slug } = await params;
   const cleanSlug = slug?.toLowerCase();
 
-  const [popular, latest, related] = await Promise.all([
-    getPopularProducts(),
-    getLatestProducts(),
-    getRelatedProducts(),
-  ]);
+  let allProducts = [];
+  let error = null;
 
-  const allProducts = [...popular, ...latest, ...related];
+  try {
+    const [popular, latest, related] = await Promise.all([
+      getPopularProducts(),
+      getLatestProducts(),
+      getRelatedProducts(),
+    ]);
+    allProducts = [...popular, ...latest, ...related];
+  } catch (err) {
+    console.error("Error fetching product data:", err);
+    error = err;
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="text-center">
+          <h1 className="text-2xl font-semibold text-gray-700 mb-2">
+            Unable to load product
+          </h1>
+          <p className="text-gray-500">
+            Please make sure the backend server is running
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   const product = allProducts.find(
     (item) => item.name.toLowerCase().replace(/\s+/g, "-") === cleanSlug
@@ -34,14 +58,4 @@ export default async function ProductPage({ params }) {
   return <ProductDetail product={product} />;
 }
 
-export async function generateStaticParams() {
-  const [popular, latest, related] = await Promise.all([
-    getPopularProducts(),
-    getLatestProducts(),
-    getRelatedProducts(),
-  ]);
-  const allProducts = [...popular, ...latest, ...related];
-  return allProducts.map((item) => ({
-    slug: item.name.toLowerCase().replace(/\s+/g, "-"),
-  }));
-}
+

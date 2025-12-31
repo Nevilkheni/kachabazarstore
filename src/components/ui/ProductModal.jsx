@@ -7,10 +7,23 @@ import { LuHeadphones, LuShoppingBag } from "react-icons/lu";
 import { FiEye } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/app/redux/cartSlice";
+import { showToast } from "@/components/global/toast";
 
 export default function ProductModal({ product, onClose }) {
   const [count, setCount] = useState(1);
   const router = useRouter();
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addToCart({ ...product, quantity: count }));
+    showToast({
+      title: "Success",
+      message: `${count} ${product.name} added to cart!`,
+      type: "success",
+    });
+  };
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -112,7 +125,10 @@ export default function ProductModal({ product, onClose }) {
                 </button>
               </div>
 
-              <button className="flex w-full gap-2 py-2 sm:py-2.5 justify-center items-center bg-emerald-500 text-white font-medium font-sans text-sm rounded-lg hover:bg-emerald-600">
+              <button
+                onClick={handleAddToCart}
+                className="flex w-full gap-2 py-2 sm:py-2.5 justify-center items-center bg-emerald-500 text-white font-medium font-sans text-sm rounded-lg hover:bg-emerald-600"
+              >
                 <LuShoppingBag className="text-sm" />
                 Add to cart
               </button>

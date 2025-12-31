@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Providers from "./redux/Providers";
+import Toast from "@/components/global/toast";
+import { CouponProvider } from "@/contexts/CouponContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +18,7 @@ export const metadata = {
   title: "Front-Store",
   description: "",
   icons: {
-    icon: "https://kachabazar-preview.netlify.app/assets/img/favicon.png",
+    icon: "/assets/weblogo.png ",
   },
 };
 
@@ -27,8 +29,11 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} overflow-y-scroll antialiased`}
       >
         <Providers>
-          <main>{children}</main>
+          <CouponProvider>
+            <main>{children}</main>
+          </CouponProvider>
         </Providers>
+        <Toast />
       </body>
     </html>
   );

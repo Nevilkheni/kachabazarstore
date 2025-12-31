@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import categories from "@/app/data/categories.json";
-import { useState } from "react";
+// import categories from "@/app/data/categories.json";
+import { useState, useEffect } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { IoGiftOutline } from "react-icons/io5";
 import { LuShoppingBag } from "react-icons/lu";
@@ -18,32 +18,65 @@ import {
   MdOutlineKeyboardArrowRight,
   MdOutlineKeyboardArrowDown,
 } from "react-icons/md";
+import { getcategory } from "@/app/api/getProducts";
 
 export default function MobileSidebar({ open, onClose, onSelect }) {
   const [activeTab, setActiveTab] = useState("category");
   const [openCategory, setOpenCategory] = useState(null);
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    async function fetchCategories() {
+      const data = await getcategory();
+      setCategories(data);
+    }
+    fetchCategories();
+  }, []);
 
   if (!open) return null;
 
   const pages = [
-    { name: "Offers", icon: <IoGiftOutline className="text-lg" /> },
-    { name: "Checkout", icon: <LuShoppingBag className="text-lg" /> },
-    { name: "FAQ", icon: <BsQuestionCircle className="text-lg" /> },
-    { name: "About Us", icon: <LuUsers className="text-lg" /> },
-    { name: "Contact Us", icon: <VscCallIncoming className="text-lg" /> },
+    {
+      name: "Offers",
+      icon: <IoGiftOutline className="text-lg" />,
+      href: "/couponssection",
+    },
+    {
+      name: "Checkout",
+      icon: <LuShoppingBag className="text-lg" />,
+      href: "/checkout-cart/checkout",
+    },
+    {
+      name: "FAQ",
+      icon: <BsQuestionCircle className="text-lg" />,
+      href: "/faq",
+    },
+    { name: "About Us", icon: <LuUsers className="text-lg" />, href: "/about" },
+    {
+      name: "Contact Us",
+      icon: <VscCallIncoming className="text-lg" />,
+      href: "/contact",
+    },
     {
       name: "Privacy Policy",
       icon: <PiShieldCheckLight className="text-lg" />,
+      href: "/Privacypolicy",
     },
     {
       name: "Forget Password",
       icon: <HiOutlineEmojiSad className="text-lg" />,
+      href: "/Auth/login",
     },
     {
       name: "Terms and Conditions",
       icon: <CgFileDocument className="text-lg" />,
+      href: "/Terms&Conditions",
     },
-    { name: "Not Found", icon: <MdErrorOutline className="text-lg" /> },
+    {
+      name: "Not Found",
+      icon: <MdErrorOutline className="text-lg" />,
+      href: "/404",
+    },
   ];
 
   const toggleCategory = (title) => {
@@ -72,21 +105,19 @@ export default function MobileSidebar({ open, onClose, onSelect }) {
         <div className="flex border-b border-gray-200 text-[16px] font-sans font-medium text-gray-900">
           <button
             onClick={() => setActiveTab("category")}
-            className={`w-1/2 py-3 pb-4 mx-4 border-b-2 ${
-              activeTab === "category"
+            className={`w-1/2 py-3 pb-4 mx-4 border-b-2 ${activeTab === "category"
                 ? "border-[#4f39f6] text-[#4f39f6]"
                 : "border-transparent hover:text-[#4f39f6]"
-            }`}
+              }`}
           >
             Category
           </button>
           <button
             onClick={() => setActiveTab("pages")}
-            className={`w-1/2 py-3 pb-4 mx-4 border-b-2 ${
-              activeTab === "pages"
+            className={`w-1/2 py-3 pb-4 mx-4 border-b-2 ${activeTab === "pages"
                 ? "border-[#4f39f6] text-[#4f39f6]"
                 : "border-transparent hover:text-[#4f39f6]"
-            }`}
+              }`}
           >
             Pages
           </button>
@@ -99,7 +130,7 @@ export default function MobileSidebar({ open, onClose, onSelect }) {
                 <div key={index}>
                   <div
                     onClick={() => toggleCategory(cat.title)}
-                    className="flex items-center justify-between px-2 py-3 hover:bg-gray-50 cursor-pointer"
+                    className="flex  items-center justify-between px-2 py-3 hover:bg-gray-50 cursor-pointer"
                   >
                     <div className="flex items-center">
                       <Image
@@ -114,9 +145,9 @@ export default function MobileSidebar({ open, onClose, onSelect }) {
                       </span>
                     </div>
                     {openCategory === cat.title ? (
-                      <MdOutlineKeyboardArrowDown className="text-gray-400 text-[20px]" />
+                      <MdOutlineKeyboardArrowDown className="text-gray-400  text-[20px]" />
                     ) : (
-                      <MdOutlineKeyboardArrowRight className="text-gray-400 text-[20px]" />
+                      <MdOutlineKeyboardArrowRight className="text-gray-400  text-[20px]" />
                     )}
                   </div>
 
@@ -142,19 +173,20 @@ export default function MobileSidebar({ open, onClose, onSelect }) {
           ) : (
             <div className=" p-6 space-y-6">
               {pages.map((page, index) => (
-                <div
+                <Link
                   key={index}
+                  href={page.href}
                   onClick={() => {
                     onSelect?.(page.name);
                     onClose?.();
                   }}
-                  className="flex items-center gap-2  hover:bg-gray-50 cursor-pointer rounded-md"
+                  className="flex items-center gap-2 hover:bg-gray-50 cursor-pointer rounded-md p-1 transition-all"
                 >
                   {page.icon}
                   <span className="text-sm font-medium text-gray-800 hover:text-green-600">
                     {page.name}
                   </span>
-                </div>
+                </Link>
               ))}
             </div>
           )}

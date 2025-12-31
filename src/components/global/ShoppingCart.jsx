@@ -20,6 +20,28 @@ export default function ShoppingCart() {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const { items, totalItems, totalAmount } = useSelector((state) => state.cart);
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/auth/user`, {
+      method: "GET",
+      credentials: "include",
+    })
+      .then(async (res) => {
+        if (!res.ok) return null;
+
+        const text = await res.text();
+        if (!text) return null;
+
+        return JSON.parse(text);
+      })
+      .then((data) => {
+        setUser(data);
+      })
+      .catch((err) => console.log("err:", err));
+  }, []);
+
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
     return () => (document.body.style.overflow = "auto");
@@ -150,7 +172,7 @@ export default function ShoppingCart() {
                               {item.quantity}
                             </span>
                             <button
-                              onClick={() => dispatch(addToCart(item))}
+                              onClick={() => dispatch(addToCart({...item, quantity: 1}))}
                               className="border cursor-pointer border-gray-100 rounded-r-full border-l-0 px-2.5 md:px-3 py-2"
                             >
                               <HiPlus className="text-sm" />
@@ -166,7 +188,7 @@ export default function ShoppingCart() {
           </>
         )}
         <div className="absolute bottom-0 left-0 right-0 bg-gray-50 p-5">
-          <div className="flex text-[16px] mb-0.5 justify-between text-black font-medium font-sans">
+          <div className="flex text-[16px]  justify-between text-black font-medium font-sans">
             <span>Subtotal</span>
             <span>${totalAmount.toFixed(2)}</span>
           </div>
@@ -174,20 +196,38 @@ export default function ShoppingCart() {
             Shipping and taxes calculated at checkout.
           </p>
 
-          <div className="flex gap-3 text-center text-sm sm:text-[16px]">
-            <Link
-              href="/Auth/login"
-              className="flex-1 border border-gray-200 bg-white text-gray-800 font-medium font-sans py-2 rounded-lg hover:bg-gray-100"
-            >
-              View Cart
-            </Link>
-            <Link
-              href="/Auth/login"
-              className="flex-1 font-medium font-sans bg-emerald-500 text-white py-2 border border-emerald-500 rounded-lg hover:bg-emerald-700"
-            >
-              Checkout
-            </Link>
-          </div>
+          {user ? (
+            <div className="flex gap-3 text-center text-sm sm:text-[16px]">
+              <Link
+                href="/checkout-cart"
+                className="flex-1 border border-gray-200 bg-white text-gray-800 font-medium font-sans py-2 rounded-lg hover:bg-gray-100"
+              >
+                View Cart
+              </Link>
+              <Link
+                href="/checkout-cart/checkout"
+                className="flex-1 font-medium font-sans bg-emerald-500 text-white py-2 border border-emerald-500 rounded-lg hover:bg-emerald-700"
+              >
+                Checkout
+              </Link>
+            </div>
+          ) : (
+            <div className="flex gap-3 text-center text-sm sm:text-[16px]">
+              <Link
+                href="/Auth/login"
+                className="flex-1 border border-gray-200 bg-white text-gray-800 font-medium font-sans py-2 rounded-lg hover:bg-gray-100"
+              >
+                View Cart
+              </Link>
+
+              <Link
+                href="/Auth/login"
+                className="flex-1 font-medium font-sans bg-emerald-500 text-white py-2 border border-emerald-500 rounded-lg hover:bg-emerald-700"
+              >
+                Checkout
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </>

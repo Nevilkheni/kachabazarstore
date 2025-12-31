@@ -60,7 +60,7 @@ export const updateItem = async (req, res) => {
             return res.status(404).json({ msg: "id missing", id });
         }
 
-        res.json({ msg: "updated lesgo", item: updated });
+        res.json({ msg: "updated", item: updated });
     } catch (err) {
         console.error(err);
         res.status(500).json({ msg: "server error", error: err.message });
@@ -86,12 +86,13 @@ export const replaceItem = async (req, res) => {
             return res.status(404).json({ msg: "id missing", id });
         }
 
-        res.json({ msg: "replaced item ong", item: replaced });
+        res.json({ msg: "replaced item", item: replaced });
     } catch (err) {
         console.error(err);
         res.status(500).json({ msg: "server error", error: err.message });
     }
 };
+
 
 export const addItem = async (req, res) => {
     try {

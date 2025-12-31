@@ -6,12 +6,15 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "import:data": "node scripts/importData.js"
+    "import:data": "node scripts/importData.js",
+    "import:coupons": "node src/scripts/importCoupons.js",
+    "verify:coupons": "node src/scripts/verifyCoupons.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@paypal/react-paypal-js": "^8.9.2",
     "axios": "^1.13.2",
     "bcryptjs": "^3.0.3",
     "cookie-parser": "^1.4.7",

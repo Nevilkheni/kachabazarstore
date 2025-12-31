@@ -78,11 +78,10 @@ export default function Coupons() {
                       </span>
                     </span>
                     <span
-                      className={` text-xs mx-1 px-4 py-1 font-medium rounded-full ${
-                        coupon.active
+                      className={` text-xs mx-1 px-4 py-1 font-medium rounded-full ${coupon.active
                           ? "bg-green-100 text-green-700"
                           : "bg-red-100 text-red-600"
-                      }`}
+                        }`}
                     >
                       {coupon.active ? "Active" : "Inactive"}
                     </span>
