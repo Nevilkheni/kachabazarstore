@@ -2,8 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import Mobilebottomheader from "./mobilebottomheader";
-import PagesDropdown from "./PagesDropdown/page";
-import CategoryDropdown from "./CategoryDropdown/page";
+import PagesDropdown from "./pagesdropdown/page";
+import CategoryDropdown from "./categorydropdown/page";
 import ShoppingCart from "../global/ShoppingCart";
 import LanguageDropdown from "./languagedropdown/page";
 import React, { useState, useRef, useEffect } from "react";
