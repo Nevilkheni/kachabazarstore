@@ -8,6 +8,7 @@
       "@/redux/*": ["src/redux/*"],
       "@/api/*": ["src/api/*"]
     },
+<<<<<<< HEAD
     "allowJs": true,
     "jsx": "preserve",
     "target": "es2017",
@@ -32,4 +33,14 @@
     "node_modules",
     ".next"
   ]
+=======
+
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true
+  },
+
+  "include": ["src"],
+  "exclude": ["backend", "node_modules"]
+>>>>>>> ac2372e4fe9b07a0c0b4dadd84005821d5ec55ab
 }
