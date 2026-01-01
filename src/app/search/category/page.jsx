@@ -21,7 +21,7 @@ export default function FeaturedCategories() {
 
     const extendedCategories = useMemo(() => {
         if (categories.length === 0) return [];
-        const duplicateCount = isMobile ? 2 : VISIBLE_CARDS_DESKTO;
+        const duplicateCount = isMobile ? 2 : VISIBLE_CARDS_DESKTOP;
         return [...categories, ...categories.slice(0, duplicateCount)];
     }, [categories, isMobile]);
 
