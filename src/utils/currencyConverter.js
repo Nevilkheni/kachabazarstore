@@ -35,7 +35,7 @@ async function getRate() {
             }
 
             if (rate && rate > 0) {
-                cachedRate = rate;
+                cachedRate = rate;  
                 lastFetched = now;
                 console.log(`Updated exchange rate: 1 USD = ${rate} INR`);
             } else {

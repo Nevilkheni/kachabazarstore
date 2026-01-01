@@ -2,13 +2,13 @@
 
 import { clearUser } from "@/app/redux/userSlice";
 import { showToast } from "./toast";
+import { logoutUser } from "../../app/api/getProducts";
 
 export const handleLogout = async (dispatch) => {
   try {
-    await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/auth/logout`, {
-      method: "GET",
-      credentials: "include",
-    });
+    const success = await logoutUser();
+
+    if (!success) throw new Error("API failed");
 
     dispatch(clearUser());
 
@@ -21,7 +21,7 @@ export const handleLogout = async (dispatch) => {
 
     setTimeout(() => {
       window.location.href = "/Auth/login";
-    }, 500);
+    }, 100);
   } catch (err) {
     console.log("Logout error:", err);
 

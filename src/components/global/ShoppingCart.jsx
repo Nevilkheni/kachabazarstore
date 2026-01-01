@@ -15,6 +15,8 @@ import {
 import { HiOutlineMinus } from "react-icons/hi";
 import { AiOutlineDelete } from "react-icons/ai";
 import { HiPlus } from "react-icons/hi";
+import { getAuthUser } from "../../app/api/getProducts";
+
 
 export default function ShoppingCart() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,23 +26,14 @@ export default function ShoppingCart() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/auth/user`, {
-      method: "GET",
-      credentials: "include",
-    })
-      .then(async (res) => {
-        if (!res.ok) return null;
+    async function fetchUser() {
+      const data = await getAuthUser();
+      setUser(data);
+    }
 
-        const text = await res.text();
-        if (!text) return null;
-
-        return JSON.parse(text);
-      })
-      .then((data) => {
-        setUser(data);
-      })
-      .catch((err) => console.log("err:", err));
+    fetchUser();
   }, []);
+
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
@@ -80,9 +73,8 @@ export default function ShoppingCart() {
       )}
 
       <div
-        className={`fixed top-0 right-0 w-full max-w-lg h-full bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 w-full max-w-lg h-full bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 ${isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="flex justify-between bg-indigo-50 items-center p-4">
           <h2 className="flex text-lg gap-2 p-1 font-sans items-center text-black font-semibold">
@@ -172,7 +164,7 @@ export default function ShoppingCart() {
                               {item.quantity}
                             </span>
                             <button
-                              onClick={() => dispatch(addToCart({...item, quantity: 1}))}
+                              onClick={() => dispatch(addToCart({ ...item, quantity: 1 }))}
                               className="border cursor-pointer border-gray-100 rounded-r-full border-l-0 px-2.5 md:px-3 py-2"
                             >
                               <HiPlus className="text-sm" />

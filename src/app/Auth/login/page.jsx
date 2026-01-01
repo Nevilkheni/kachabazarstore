@@ -201,7 +201,11 @@ export default function Login() {
               Login With Google
             </button>
 
-            <button className="w-full flex text-sm font-medium font-sans items-center justify-center gap-3 bg-[#2B7BFF] hover:bg-[#2168e8] text-white py-2.5 rounded-lg  transition">
+            <button
+              onClick={() =>
+                (window.location.href = `${process.env.NEXT_PUBLIC_FACEBOOK_BACKEND_PORT || 'http://localhost:8000'}/auth/facebook`)
+              }
+              className="w-full flex text-sm font-medium font-sans items-center justify-center gap-3 bg-[#2B7BFF] hover:bg-[#2168e8] text-white py-2.5 rounded-lg  transition">
               <FaFacebookF className="text-[20px]" />
               Login With Facebook
             </button>

@@ -38,9 +38,8 @@ export default function Toast() {
       >
         <div className="flex gap-3 p-4">
           <div
-            className={`mt-1 h-3 w-3 rounded-full ${
-              isError ? "bg-red-500" : "bg-green-500"
-            }`}
+            className={`mt-1 h-3 w-3 rounded-full ${isError ? "bg-red-500" : "bg-green-500"
+              }`}
           />
 
           <div className="flex-1">

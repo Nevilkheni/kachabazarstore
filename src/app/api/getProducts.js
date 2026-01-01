@@ -1,7 +1,6 @@
 import { getApiUrl } from '@/utils/apiConfig';
 
-// const categoryAPI = "https://gist.githubusercontent.com/Nevilkheni/a0b3e4a431e7fa164f86fc3265fe3cbc/raw/categories.json";
-// const categoryAPI = "http://localhost:3001/api/categories"
+
 const categoryAPI = getApiUrl() + "/api/categories";
 export async function getcategory() {
     try {
@@ -15,9 +14,7 @@ export async function getcategory() {
 }
 
 
-// const popularAPI = "https://69141c12f34a2ff1170e3233.mockapi.io/PopularProducts";
-// const popularAPI = "https://gist.githubusercontent.com/Nevilkheni/bbf931f6fe6356e8a029ff29fb22da4a/raw/PopularProductsdata";
-// const popularAPI = "http://localhost:3001/api/popular-products";
+
 const popularAPI = getApiUrl() + "/api/popularproducts";
 export async function getPopularProducts() {
     try {
@@ -31,9 +28,7 @@ export async function getPopularProducts() {
 }
 
 
-// const latestAPI = "https://69141c12f34a2ff1170e3233.mockapi.io   /LatestProducts";
-// const latestAPI = "https://gist.githubusercontent.com/Nevilkheni/6004125f9a4a62055c6d356509f93690/raw/latestproducts";
-// const latestAPI = "http://localhost:3001/api/latest-products";
+
 const latestAPI = getApiUrl() + "/api/latestproducts";
 export async function getLatestProducts() {
     try {
@@ -47,7 +42,6 @@ export async function getLatestProducts() {
 }
 
 
-// const relatedproductAPI = "http://localhost:3001/api/related-products";
 const relatedproductAPI = getApiUrl() + "/api/relatedproducts";
 export async function getRelatedProducts() {
     try {
@@ -61,7 +55,6 @@ export async function getRelatedProducts() {
 }
 
 
-// const reviewsAPI = "http://localhost:3001/api/product-reviews";
 const reviewsAPI = getApiUrl() + "/api/productreviews";
 export async function getreviewsData() {
     try {
@@ -85,5 +78,49 @@ export async function getCoupons() {
     } catch (err) {
         console.error("getCoupons error:", err);
         return [];
+    }
+}
+
+
+
+const logoutAPI = getApiUrl() + "/auth/logout";
+export async function logoutUser() {
+    try {
+        const res = await fetch(logoutAPI, {
+            method: "GET",
+            credentials: "include",
+            cache: "no-store",
+        });
+
+        if (!res.ok) throw new Error("Logout failed");
+
+        return true;
+    } catch (err) {
+        console.error("logoutUser error:", err);
+        return false;
+    }
+}
+
+
+
+const userAPI = getApiUrl() + "/auth/user";
+
+export async function getAuthUser() {
+    try {
+        const res = await fetch(userAPI, {
+            method: "GET",
+            credentials: "include",
+            cache: "no-store",
+        });
+
+        if (!res.ok) return null;
+
+        const text = await res.text();
+        if (!text) return null;
+
+        return JSON.parse(text);
+    } catch (err) {
+        console.error("getAuthUser error:", err);
+        return null;
     }
 }

@@ -106,8 +106,8 @@ export default function MobileSidebar({ open, onClose, onSelect }) {
           <button
             onClick={() => setActiveTab("category")}
             className={`w-1/2 py-3 pb-4 mx-4 border-b-2 ${activeTab === "category"
-                ? "border-[#4f39f6] text-[#4f39f6]"
-                : "border-transparent hover:text-[#4f39f6]"
+              ? "border-[#4f39f6] text-[#4f39f6]"
+              : "border-transparent hover:text-[#4f39f6]"
               }`}
           >
             Category
@@ -115,8 +115,8 @@ export default function MobileSidebar({ open, onClose, onSelect }) {
           <button
             onClick={() => setActiveTab("pages")}
             className={`w-1/2 py-3 pb-4 mx-4 border-b-2 ${activeTab === "pages"
-                ? "border-[#4f39f6] text-[#4f39f6]"
-                : "border-transparent hover:text-[#4f39f6]"
+              ? "border-[#4f39f6] text-[#4f39f6]"
+              : "border-transparent hover:text-[#4f39f6]"
               }`}
           >
             Pages

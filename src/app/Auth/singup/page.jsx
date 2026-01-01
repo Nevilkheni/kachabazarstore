@@ -12,6 +12,7 @@ import {
   getApiUrl,
   getGoogleBackendUrl,
   getGithubBackendUrl,
+  getFacebookBackendUrl,
 } from "@/utils/apiConfig";
 
 export default function Singup() {
@@ -171,7 +172,11 @@ export default function Singup() {
             Sign Up With Google
           </button>
 
-          <button className="w-full flex text-sm font-medium font-sans items-center justify-center gap-3 bg-[#2B7BFF] hover:bg-[#2168e8] text-white py-2.5 rounded-lg  transition">
+          <button
+            onClick={() =>
+              (window.location.href = `${getFacebookBackendUrl()}/auth/facebook`)
+            }
+            className="w-full flex text-sm font-medium font-sans items-center justify-center gap-3 bg-[#2B7BFF] hover:bg-[#2168e8] text-white py-2.5 rounded-lg  transition">
             <FaFacebookF className="text-[20px]" />
             Sign Up With Facebook
           </button>

@@ -68,7 +68,7 @@ app.use(latestProducts);
 app.use(popularProducts);
 app.use(productReviews);
 app.use(relatedProducts);
-app.use(search);
+app.use("/api/search", search);
 app.use("/api/coupons", couponRoutes);
 
 app.use("/api/paypal", paypalRoutes);

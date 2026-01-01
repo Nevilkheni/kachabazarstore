@@ -11,7 +11,7 @@ const getProductModels = () => {
     };
 };
 
-router.get("/api/search", async (req, res) => {
+router.get("/", async (req, res) => {
     try {
         const { query } = req.query;
 

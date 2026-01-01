@@ -4,6 +4,7 @@ import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import GoogleStrategy from "passport-google-oauth20";
 import GitHubStrategy from "passport-github2";
+import FacebookStrategy from "passport-facebook";
 
 const router = express.Router();
 const getDynamicCallbackURL = (req, provider) => {
@@ -22,7 +23,7 @@ const getDynamicRedirectURL = (req, path = '') => {
 
 router.get("/google", (req, res, next) => {
     const callbackURL = getDynamicCallbackURL(req, 'google');
-    
+
     const googleStrategy = new GoogleStrategy(
         {
             clientID: process.env.GOOGLE_CLIENT_ID || '',
@@ -94,13 +95,13 @@ router.get("/google", (req, res, next) => {
     );
 
     passport.use('google-dynamic', googleStrategy);
-    
+
     passport.authenticate('google-dynamic', { scope: ["profile", "email"] })(req, res, next);
 });
 
 router.get("/github", (req, res, next) => {
     const callbackURL = getDynamicCallbackURL(req, 'github');
-    
+
     const githubStrategy = new GitHubStrategy(
         {
             clientID: process.env.GITHUB_CLIENT_ID || '',
@@ -165,8 +166,80 @@ router.get("/github", (req, res, next) => {
     );
 
     passport.use('github-dynamic', githubStrategy);
-    
+
     passport.authenticate('github-dynamic', { scope: ["user:email"] })(req, res, next);
+});
+
+router.get("/facebook", (req, res, next) => {
+    const callbackURL = getDynamicCallbackURL(req, 'facebook');
+
+    const facebookStrategy = new FacebookStrategy(
+        {
+            clientID: process.env.FACEBOOK_CLIENT_ID || '',
+            clientSecret: process.env.FACEBOOK_CLIENT_SECRET || '',
+            callbackURL: callbackURL,
+            profileFields: ['id', 'displayName', 'photos', 'email']
+        },
+        async (accessToken, refreshToken, profile, done) => {
+            try {
+                const email = profile.emails?.[0]?.value || null;
+
+                let user = await User.findOne({ facebookId: profile.id });
+
+                if (!user) {
+                    if (email) {
+                        const existingUser = await User.findOne({ email });
+
+                        if (existingUser) {
+                            if (existingUser.facebookId && existingUser.facebookId !== profile.id) {
+                                return done(new Error("User already exists with this Facebook account"), null);
+                            }
+                            existingUser.facebookId = profile.id;
+                            existingUser.name = profile.displayName;
+                            existingUser.avatar = profile.photos?.[0]?.value || null;
+                            await existingUser.save();
+                            return done(null, existingUser);
+                        }
+                    }
+
+                    try {
+                        user = await User.create({
+                            facebookId: profile.id,
+                            name: profile.displayName,
+                            email: email,
+                            avatar: profile.photos?.[0]?.value || null,
+                        });
+                    } catch (createErr) {
+                        if (createErr.code === 11000 && email) {
+                            const existingUser = await User.findOne({ email });
+                            if (existingUser) {
+                                existingUser.facebookId = profile.id;
+                                existingUser.name = profile.displayName;
+                                existingUser.avatar = profile.photos?.[0]?.value || null;
+                                await existingUser.save();
+                                return done(null, existingUser);
+                            }
+                        }
+                        throw createErr;
+                    }
+                } else {
+                    user.name = profile.displayName;
+                    if (email) user.email = email;
+                    user.avatar = profile.photos?.[0]?.value || null;
+                    await user.save();
+                }
+
+                return done(null, user);
+            } catch (err) {
+                console.error("Facebook OAuth error:", err);
+                return done(err, null);
+            }
+        }
+    );
+
+    passport.use('facebook-dynamic', facebookStrategy);
+
+    passport.authenticate('facebook-dynamic', { scope: ["email"] })(req, res, next);
 });
 router.get(
     "/google/callback",
@@ -228,6 +301,36 @@ router.get(
     }
 );
 
+router.get(
+    "/facebook/callback",
+    (req, res, next) => {
+        passport.authenticate("facebook-dynamic", (err, user) => {
+            if (err) {
+                console.error("Facebook OAuth callback error:", err);
+                const errorMessage = encodeURIComponent(
+                    err.message || "User already exists with this Facebook account"
+                );
+                const redirectURL = getDynamicRedirectURL(req, '/Auth/login');
+                return res.redirect(`${redirectURL}?error=${errorMessage}`);
+            }
+            if (!user) {
+                const errorMessage = encodeURIComponent("Authentication failed. Please try again.");
+                const redirectURL = getDynamicRedirectURL(req, '/Auth/login');
+                return res.redirect(`${redirectURL}?error=${errorMessage}`);
+            }
+            req.logIn(user, (loginErr) => {
+                if (loginErr) {
+                    const errorMessage = encodeURIComponent("Login failed. Please try again.");
+                    const redirectURL = getDynamicRedirectURL(req, '/Auth/login');
+                    return res.redirect(`${redirectURL}?error=${errorMessage}`);
+                }
+                const successURL = getDynamicRedirectURL(req, '/dashboard');
+                return res.redirect(successURL);
+            });
+        })(req, res, next);
+    }
+);
+
 
 
 
@@ -240,9 +343,9 @@ router.post("/register", async (req, res) => {
 
         const userExist = await User.findOne({ email });
         if (userExist) {
-            if (userExist.password === null && (userExist.googleId || userExist.githubId)) {
+            if (userExist.password === null && (userExist.googleId || userExist.githubId || userExist.facebookId)) {
                 return res.status(409).json({
-                    msg: "User already exists with this email. Please login with Google or GitHub."
+                    msg: "User already exists with this email. Please login with Google, GitHub, or Facebook."
                 });
             }
             return res.status(409).json({ msg: "Email already registered. Please use a different email or login instead." });
@@ -281,7 +384,7 @@ router.post("/login", async (req, res) => {
 
         if (!user.password) {
             return res.status(401).json({
-                msg: "This account was created with Google/GitHub. Please use social login."
+                msg: "This account was created with Google/GitHub/Facebook. Please use social login."
             });
         }
 

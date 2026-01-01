@@ -17,7 +17,6 @@ export default function SearchLayout({ children }) {
                 <CategoryBanners />
             </div>
             <FeaturedCategories />
-
             <main >
                 {children}</main>
             <Footer />

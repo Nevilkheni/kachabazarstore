@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { IoBagAdd } from "react-icons/io5";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-import { HiArrowsPointingOut } from "react-icons/hi2";
 import { HiOutlineMinus, HiPlus } from "react-icons/hi";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "@/app/redux/cartSlice";
@@ -112,9 +111,9 @@ export default function ProductCard({ product }) {
                     </p>
                 </div>
 
-                <div className="mt-2 mb-1">
+                <div className="py-1">
                     <div className="flex justify-between">
-                        <p className="text-gray-600 text-xs font-bold font-sans">
+                        <p className="text-black font-bold text-md text-left py-1.5 font-sans">
                             ${cleanPrice}
                         </p>
                         {product.oldPrice && (
@@ -123,16 +122,16 @@ export default function ProductCard({ product }) {
                             </p>
                         )}
                     </div>
-                    <Image
+                    {/* <Image
                         src="https://i.ibb.co.com/GQQy11TV/display-price-line.webp"
                         alt="Price Line"
                         width={192}
                         height={192}
                         className="object-cover mx-auto mt-1"
-                    />
-                    <p className="text-black font-bold text-md text-center py-1.5 font-sans">
+                    /> */}
+                    {/* <p className="text-black font-bold text-md text-left py-1.5 font-sans">
                         ${cleanPrice}
-                    </p>
+                    </p> */}
                 </div>
             </div>
         </div>

@@ -10,12 +10,13 @@ dotenv.config({ path: path.join(__dirname, "../.env") });
 import passport from "passport";
 import GoogleStrategy from "passport-google-oauth20";
 import GitHubStrategy from "passport-github2";
+import FacebookStrategy from "passport-facebook";
 import User from "./models/User.js";
 
 
 // passport.use(
 //     new GoogleStrategy(
-//         {
+//         { 
 //             clientID: process.env.GOOGLE_CLIENT_ID,
 //             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
 //             callbackURL: process.env.GOOGLE_CALLBACK_URL + "/auth/google/callback",
@@ -179,6 +180,72 @@ passport.use(
                 return done(null, user);
             } catch (err) {
                 console.error("GitHub OAuth error:", err);
+                return done(err, null);
+            }
+        }
+    )
+);
+
+passport.use(
+    new FacebookStrategy(
+        {
+            clientID: process.env.FACEBOOK_CLIENT_ID || '',
+            clientSecret: process.env.FACEBOOK_CLIENT_SECRET || '',
+            callbackURL: (process.env.FACEBOOK_CALLBACK_URL || 'http://localhost:8000') + "/auth/facebook/callback",
+            profileFields: ['id', 'displayName', 'photos', 'email']
+        },
+        async (accessToken, refreshToken, profile, done) => {
+            try {
+                const email = profile.emails?.[0]?.value || null;
+
+                let user = await User.findOne({ facebookId: profile.id });
+
+                if (!user) {
+                    if (email) {
+                        const existingUser = await User.findOne({ email });
+
+                        if (existingUser) {
+                            if (existingUser.facebookId && existingUser.facebookId !== profile.id) {
+                                return done(new Error("User already exists with this Facebook account"), null);
+                            }
+                            existingUser.facebookId = profile.id;
+                            existingUser.name = profile.displayName;
+                            existingUser.avatar = profile.photos?.[0]?.value || null;
+                            await existingUser.save();
+                            return done(null, existingUser);
+                        }
+                    }
+
+                    try {
+                        user = await User.create({
+                            facebookId: profile.id,
+                            name: profile.displayName,
+                            email: email,
+                            avatar: profile.photos?.[0]?.value || null,
+                        });
+                    } catch (createErr) {
+                        if (createErr.code === 11000 && email) {
+                            const existingUser = await User.findOne({ email });
+                            if (existingUser) {
+                                existingUser.facebookId = profile.id;
+                                existingUser.name = profile.displayName;
+                                existingUser.avatar = profile.photos?.[0]?.value || null;
+                                await existingUser.save();
+                                return done(null, existingUser);
+                            }
+                        }
+                        throw createErr;
+                    }
+                } else {
+                    user.name = profile.displayName;
+                    if (email) user.email = email;
+                    user.avatar = profile.photos?.[0]?.value || null;
+                    await user.save();
+                }
+
+                return done(null, user);
+            } catch (err) {
+                console.error("Facebook OAuth error:", err);
                 return done(err, null);
             }
         }

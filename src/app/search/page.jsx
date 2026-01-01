@@ -9,6 +9,8 @@ export default function SearchPage() {
     const searchParams = useSearchParams();
     const query = searchParams.get("query");
     const [products, setProducts] = useState([]);
+    const [sortedProducts, setSortedProducts] = useState([]);
+    const [sortOrder, setSortOrder] = useState("low");
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -26,7 +28,9 @@ export default function SearchPage() {
             }
 
             const data = await response.json();
+            console.log("Search API response:", data);
             setProducts(data);
+            setSortedProducts(data);
         } catch (err) {
             setError(err.message);
             console.error("Search error:", err);
@@ -34,6 +38,32 @@ export default function SearchPage() {
             setLoading(false);
         }
     }, []);
+
+    const sortProducts = useCallback((order) => {
+        const sorted = [...products].sort((a, b) => {
+            const priceA = parseFloat(a.price) || 0;
+            const priceB = parseFloat(b.price) || 0;
+
+            if (order === "low") {
+                return priceA - priceB;
+            } else {
+                return priceB - priceA;
+            }
+        });
+        setSortedProducts(sorted);
+    }, [products]);
+
+    const handleSortChange = (e) => {
+        const newSortOrder = e.target.value;
+        setSortOrder(newSortOrder);
+        sortProducts(newSortOrder);
+    };
+
+    useEffect(() => {
+        if (products.length > 0) {
+            sortProducts(sortOrder);
+        }
+    }, [products, sortOrder, sortProducts]);
 
     useEffect(() => {
         if (query) {
@@ -71,14 +101,17 @@ export default function SearchPage() {
 
     return (
         <div>
-            <div className="max-w-[1456px] mx-auto py-1 text-black bg-[#ffedd4] px-4 rounded-md flex items-center justify-between">
+            <div className="max-w-[1456px] mx-auto py-0.5 text-black bg-[#ffedd4] px-4 rounded-md flex items-center justify-between">
                 <div className="flex w-full justify-between items-center gap-2 mx-aut bg-orange-100 border border-gray-100 rounded">
-                    <p className="text-sm text-gray-700 font-sans font-medium">Total 2 Items Found</p>
+                    <p className="text-sm text-gray-700 font-sans font-medium">
+                        Total {sortedProducts.length} Items Found
+                    </p>
                     <div className="flex items-center gap-2">
                         <p className="text-sm text-gray-700">Sort By Price</p>
                         <select
                             className="text-sm border bg-white border-gray-300 rounded-md px-3 my-2 outline-none cursor-pointer"
-                            defaultValue="low"
+                            value={sortOrder}
+                            onChange={handleSortChange}
                         >
                             <option value="low">Low to High</option>
                             <option value="high">High to Low</option>
@@ -88,7 +121,7 @@ export default function SearchPage() {
             </div>
             <div className=" py-3 px-4">
                 <div className="max-w-[1456px] mx-auto">
-                    {products.length === 0 ? (
+                    {sortedProducts.length === 0 ? (
                         <div className=" p-6">
                             <Image
                                 src={"https://kachabazar-store-nine.vercel.app/no-result.svg"}
@@ -102,8 +135,8 @@ export default function SearchPage() {
                             </div>
                         </div>
                     ) : (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                            {products.map((product) => (
+                        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 2xl:grid-cols-6 gap-2 md:gap-3">
+                            {sortedProducts.map((product) => (
                                 <ProductCard key={product.id} product={product} />
                             ))}
                         </div>
