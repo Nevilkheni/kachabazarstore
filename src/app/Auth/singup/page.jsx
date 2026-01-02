@@ -147,9 +147,9 @@ export default function Singup() {
               className="w-full border rounded-lg bg-gray-50 py-2  text-sm pl-12  border-gray-200 text-black focus:outline-none focus:ring-1 focus:ring-gray-500"
             />
           </div>
-          <p className="text-sm py-5 font-medium font-sans text-emerald-600 text-right">
+          {/* <p className="text-sm py-5 font-medium font-sans text-emerald-600 text-right">
             Forgot password?
-          </p>
+          </p> */}
           <button
             type="submit"
             className="w-full h-10 font-semibold rounded-lg transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-500/25 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"

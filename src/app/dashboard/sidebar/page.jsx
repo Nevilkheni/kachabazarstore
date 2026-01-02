@@ -26,7 +26,7 @@ export default function Sidebar() {
   const isSection = (path) => pathname.startsWith(path);
 
   return (
-    <div className="w-full bg-white p-8 pb-5">
+    <div className="w-full bg-[#f9fafb] p-8 pb-5">
       {user ? (
         <div className="flex gap-4 sm:gap-3 items-center py-1.5  ">
           <div className=" rounded-full shrink-0">
@@ -88,10 +88,9 @@ export default function Sidebar() {
           <Link
             href="/dashboard"
             className={`flex items-center gap-2.5 py-2.5 px-4 rounded-lg
-              ${
-                isExact("/dashboard")
-                  ? "bg-[#DFFBE9] text-green-600"
-                  : "hover:bg-gray-100 text-gray-600"
+              ${isExact("/dashboard")
+                ? "bg-[#DFFBE9] text-green-600"
+                : "hover:bg-gray-100 text-gray-600"
               }
             `}
           >
@@ -102,10 +101,9 @@ export default function Sidebar() {
           <Link
             href="/dashboard/my-orders?page=1"
             className={`flex items-center gap-3.5 py-2.5 px-4 rounded-lg
-              ${
-                isSection("/dashboard/my-orders")
-                  ? "bg-[#DFFBE9] text-green-600"
-                  : "hover:bg-gray-100 text-gray-600"
+              ${isSection("/dashboard/my-orders")
+                ? "bg-[#DFFBE9] text-green-600"
+                : "hover:bg-gray-100 text-gray-600"
               }
             `}
           >
@@ -113,18 +111,25 @@ export default function Sidebar() {
             My Orders
           </Link>
 
-          <li className="flex items-center gap-2.5 py-2.5 px-4 hover:bg-gray-100 rounded-lg text-gray-600">
+          <Link
+            href="/dashboard/my-review"
+            className={`flex items-center gap-2.5 py-2.5 px-4 rounded-lg
+              ${isSection("/dashboard/my-review")
+                ? "bg-[#DFFBE9] text-green-600"
+                : "hover:bg-gray-100 text-gray-600"
+              }
+            `}
+          >
             <FiStar className="text-lg" />
             My Review
-          </li>
+          </Link>
 
           <Link
             href="/dashboard/my-account"
             className={`flex items-center gap-2.5 py-2.5 px-4 rounded-lg
-              ${
-                isExact("/dashboard/my-account")
-                  ? "bg-[#DFFBE9] text-green-600"
-                  : "hover:bg-gray-100 text-gray-600"
+              ${isExact("/dashboard/my-account")
+                ? "bg-[#DFFBE9] text-green-600"
+                : "hover:bg-gray-100 text-gray-600"
               }
             `}
           >
@@ -135,10 +140,9 @@ export default function Sidebar() {
           <Link
             href="/dashboard/update-profile"
             className={`flex items-center gap-2.5 py-2.5 px-4 rounded-lg
-              ${
-                isExact("/dashboard/update-profile")
-                  ? "bg-[#DFFBE9] text-green-600"
-                  : "hover:bg-gray-100 text-gray-600"
+              ${isExact("/dashboard/update-profile")
+                ? "bg-[#DFFBE9] text-green-600"
+                : "hover:bg-gray-100 text-gray-600"
               }
             `}
           >
@@ -149,10 +153,9 @@ export default function Sidebar() {
           <Link
             href="/dashboard/change-password"
             className={`flex items-center gap-2.5 py-2.5 px-4 rounded-lg
-              ${
-                isExact("/dashboard/change-password")
-                  ? "bg-[#DFFBE9] text-green-600"
-                  : "hover:bg-gray-100 text-gray-600"
+              ${isExact("/dashboard/change-password")
+                ? "bg-[#DFFBE9] text-green-600"
+                : "hover:bg-gray-100 text-gray-600"
               }
             `}
           >
