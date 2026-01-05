@@ -25,6 +25,7 @@ import "./passport.js";
 import authRoutes from "./routes/auth.js";
 import paypalRoutes from "./routes/paypal.js";
 import orderRoutes from "./routes/orderRoutes.js";
+import cashfreeRoutes from "./routes/cashfree.js";
 
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -33,7 +34,7 @@ await connectDB();
 
 app.use(
     cors({
-        origin: [
+        origin: [ 
             "http://localhost:3000",
             "http://192.168.1.10:3000",
             process.env.CROS_ORIGIN_URL
@@ -72,9 +73,10 @@ app.use("/api/search", search);
 app.use("/api/coupons", couponRoutes);
 
 app.use("/api/paypal", paypalRoutes);
+app.use("/api/cashfree", cashfreeRoutes);
 app.use("/api", orderRoutes);
 app.use("/auth", authRoutes);
-app.get("/", (req, res) => {
+app.get("/", (_, res) => {
     res.send("Server running with Google login + product API");
 });
 

@@ -17,7 +17,7 @@ const orderSchema = new mongoose.Schema(
 
     payment: {
       type: String,
-      enum: ["cash", "card", "paypal", "razorpay", "cod"],
+      enum: ["cash", "card", "paypal", "razorpay", "cashfree", "cod"],
       required: true,
     },
 
@@ -42,3 +42,4 @@ const orderSchema = new mongoose.Schema(
 
 export default mongoose.models.Order ||
   mongoose.model("Order", orderSchema);
+ 

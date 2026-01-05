@@ -1,7 +1,7 @@
 import Footer from "@/components/footer/page";
 import Mainheader from "@/components/header/page";
-import CategoryBanners from "./CategoryBanners/page";
 import FeaturedCategories from "./category/page";
+import CategoryBanners from "./categorybanners/page";
 
 export const metadata = {
     title: "Search Products - Kachabazar",

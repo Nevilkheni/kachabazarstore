@@ -17,7 +17,7 @@ router.post("/orders/create", isAuth, async (req, res) => {
   try {
     const { items, total } = req.body || {};
 
-    if (!Array.isArray(items) || items.length === 0) {
+    if (!Array.isArray(items) || items.length === 0) { 
       return res
         .status(400)
         .json({ message: "Cannot create order with an empty cart" });

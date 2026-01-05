@@ -22,6 +22,7 @@ import { setOrder } from "@/app/redux/orderSlice";
 import { useRouter } from "next/navigation";
 import PayPalCheckout from "@/components/paypal/PayPalCheckout";
 import RazorpayCheckout from "@/components/razorpay/RazorpayCheckout";
+import CashfreeCheckout from "@/components/cashfree/CashfreeCheckout";
 import CouponApply from "@/components/coupon/CouponApply";
 import { useCouponContext } from "@/contexts/CouponContext";
 
@@ -461,7 +462,7 @@ export default function CheckoutForm() {
               03. Payment Method
             </h2>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
               <PaymentOption
                 title="Cash"
                 icon={<IoWallet />}
@@ -523,6 +524,24 @@ export default function CheckoutForm() {
                 }}
                 error={errors.payment}
               />
+
+              <PaymentOption
+                title="Cashfree"
+                icon={<ImCreditCard />}
+                checked={form.payment === "cashfree"}
+                onChange={() => {
+                  if (!isFormValid()) {
+                    showToast({
+                      type: "error",
+                      title: "Hold up",
+                      message: "Fill all details before Cashfree payment",
+                    });
+                    return;
+                  }
+                  handleChange("payment", "cashfree");
+                }}
+                error={errors.payment}
+              />
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
@@ -552,6 +571,23 @@ export default function CheckoutForm() {
               ) : form.payment === "razorpay" ? (
                 <div className="w-full">
                   <RazorpayCheckout
+                    amount={total.toFixed(2)}
+                    onProcessingChange={setIsProcessing}
+                    orderData={{
+                      name: `${form.firstName} ${form.lastName}`,
+                      email: form.email,
+                      phone: form.phone,
+                      address: `${form.address}, ${form.city}, ${form.country} - ${form.zip}`,
+                    }}
+                    onValidateAndCreateOrder={handleConfirmOrder}
+                    onSuccess={() => {
+                      router.push(`/dashboard/my-orders`);
+                    }}
+                  />
+                </div>
+              ) : form.payment === "cashfree" ? (
+                <div className="w-full">
+                  <CashfreeCheckout
                     amount={total.toFixed(2)}
                     onProcessingChange={setIsProcessing}
                     orderData={{

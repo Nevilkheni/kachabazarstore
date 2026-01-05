@@ -105,8 +105,7 @@ export default function MyOrdersPage() {
   }
 
   return (
-    <div className="bg-white text-black rounded-lg p-6">
-      <h1 className="text-lg font-medium font-sans py-2 mb-10">My Orders</h1>
+    <div className="bg-white text-black rounded-lg  py-3">
 
       {orders.length === 0 ? (
         <div className="flex items-center justify-center py-12">
@@ -118,11 +117,11 @@ export default function MyOrdersPage() {
             <table className="w-full text-sm ">
               <thead className="bg-gray-50 text-gray-600 ">
                 <tr>
-                  <th className="px-3 py-2 text-left text-sm font-semibold text-gray-600">
+                  <th className="px-6 pr-2 py-3 text-left text-sm font-semibold text-gray-600">
                     Order ID
                   </th>
                   <th className="px-3 py-1 text-left text-sm font-semibold text-gray-600">
-                    Order Time
+                    OrderTime
                   </th>
                   <th className="px-3 py-1 text-left text-sm font-semibold text-gray-600">
                     Method
@@ -148,7 +147,7 @@ export default function MyOrdersPage() {
               <tbody>
                 {orders.map((order) => (
                   <tr key={order._id} className="border-t border-gray-100">
-                    <td className="px-4 py-3 font-medium">{order.orderId}</td>
+                    <td className="px-6 pr-2  font-medium">{order.orderId}</td>
                     <td className="px-4 py-3">{formatDate(order.createdAt)}</td>
                     <td className="px-4 py-3">
                       {formatPaymentMethod(order.payment)}
@@ -173,7 +172,7 @@ export default function MyOrdersPage() {
                       ${order.total?.toFixed(2) || "0.00"}
                     </td>
 
-                    <td className="px-4 py-3 text-center">
+                    <td className="px-7 py-3 text-right">
                       <Link
                         href={`/order/${order.orderId}`}
                         className="text-green-600 hover:scale-110 transition inline-block"
@@ -187,22 +186,21 @@ export default function MyOrdersPage() {
             </table>
           </div>
 
-          <div className="flex items-center justify-between mt-6 text-sm">
-            <p className="text-gray-500">
+          <div className="flex flex-col md:flex-row gap-3 items-center justify-between mt-6 text-sm">
+            <p className="mr-auto text-gray-500">
               SHOWING {(page - 1) * 10 + 1}–
               {Math.min(page * 10, orders.length + (page - 1) * 10)}
             </p>
 
-            <div className="flex gap-2">
+            <div className="flex gap-5 sm:gap-2">
               {[...Array(totalPages)].map((_, i) => (
                 <button
                   key={i}
                   onClick={() => changePage(i + 1)}
                   className={`h-8 w-8 rounded
-                    ${
-                      page === i + 1
-                        ? "bg-green-600 text-white"
-                        : "hover:bg-gray-100"
+                    ${page === i + 1
+                      ? "bg-green-600 text-white"
+                      : "hover:bg-gray-100"
                     }
                   `}
                 >

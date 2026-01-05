@@ -2,8 +2,11 @@
 import { HiOutlineKey } from "react-icons/hi";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { HiOutlineLockClosed } from "react-icons/hi";
+import { useSelector } from "react-redux";
 
 export default function ChangePasswordPage() {
+  const user = useSelector((state) => state.user.user);
+
   return (
     <div className=" flex justify-center py-8 lg:px-6">
       <div className="w-full">
@@ -31,7 +34,7 @@ export default function ChangePasswordPage() {
               <div className="relative">
                 <input
                   type="email"
-                  value="justin@gmail.com"
+                  value={user?.email || ""}
                   disabled
                   className="w-full py-2 pl-11 pr-4 rounded-xl border border-gray-200 bg-gray-50 text-gray-600 text-sm focus:outline-none  focus:ring-1 focus:ring-teal-300"
                 />

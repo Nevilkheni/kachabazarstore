@@ -7,7 +7,7 @@ export default function MyAccountPage() {
   const { user } = useSelector((state) => state.user);
 
   return (
-    <div className="grid px-6 py-8  grid-cols-1 lg:grid-cols-2 gap-4">
+    <div className="grid sm:px-6 px-2 py-4 sm:py-8  grid-cols-1 lg:grid-cols-2 gap-4">
       <div className="relative border border-gray-200 rounded-lg p-4 bg-white">
         <button className="absolute top-2 right-2 bg-cyan-600 text-white px-3 py-1 rounded hover:bg-cyan-700">
           Edit
