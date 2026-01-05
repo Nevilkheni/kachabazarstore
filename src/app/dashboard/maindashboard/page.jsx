@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import { FiShoppingCart } from "react-icons/fi";
 // import { LuRefreshCw } from "react-icons/lu";
 // import { GrDeliver } from "react-icons/gr";
@@ -77,6 +78,8 @@
 
 
 
+=======
+>>>>>>> 4d3a92ceb66327c8e7bc3cc619b3677a47ab2d9d
 "use client";
 import { FiShoppingCart } from "react-icons/fi";
 import { LuRefreshCw } from "react-icons/lu";

@@ -137,7 +137,7 @@ export const updateCoupon = async (req, res) => {
         const { id } = req.params;
         const updateData = req.body;
 
-        if (updateData.code) {
+        if (updateData.code && updateData.code.trim() !== '') {
             const existingCoupon = await Coupon.findOne({
                 code: updateData.code.toUpperCase(),
                 _id: { $ne: id }
@@ -149,6 +149,8 @@ export const updateCoupon = async (req, res) => {
                 });
             }
             updateData.code = updateData.code.toUpperCase();
+        } else if (updateData.hasOwnProperty('code')) {
+            delete updateData.code;
         }
 
         const updatedCoupon = await Coupon.findByIdAndUpdate(
@@ -302,79 +304,79 @@ export const validateCoupon = async (req, res) => {
     }
 };
 export
- const checkCouponValidity = async (req, res) => {
-    try {
-        const { code, orderAmount } = req.body;
+    const checkCouponValidity = async (req, res) => {
+        try {
+            const { code, orderAmount } = req.body;
 
-        if (!code || orderAmount === undefined || orderAmount === null) {
-            return res.status(400).json({
-                success: false,
-                message: "Coupon code and order amount are required"
-            });
-        }
-
-        const numericOrderAmount = parseFloat(orderAmount);
-        if (isNaN(numericOrderAmount) || numericOrderAmount <= 0) {
-            return res.status(400).json({
-                success: false,
-                message: "Invalid order amount"
-            });
-        }
-
-        const coupon = await Coupon.findOne({
-            code: code.toUpperCase().trim(),
-            status: "Active"
-        });
-
-        if (!coupon) {
-            return res.json({
-                success: true,
-                data: {
-                    isValid: false,
-                    reason: "Invalid or inactive coupon code"
-                }
-            });
-        }
-
-        if (coupon.expiryDate && new Date() > new Date(coupon.expiryDate)) {
-            return res.json({
-                success: true,
-                data: {
-                    isValid: false,
-                    reason: "This coupon has expired"
-                }
-            });
-        }
-
-        if (numericOrderAmount < coupon.minPurchase) {
-            return res.json({
-                success: true,
-                data: {
-                    isValid: false,
-                    reason: `Minimum purchase amount of $${coupon.minPurchase} required for this coupon`
-                }
-            });
-        }
-
-        const discountAmount = Math.round((numericOrderAmount * coupon.discountPercent) / 100);
-
-        res.json({
-            success: true,
-            data: {
-                isValid: true,
-                discountAmount,
-                coupon
+            if (!code || orderAmount === undefined || orderAmount === null) {
+                return res.status(400).json({
+                    success: false,
+                    message: "Coupon code and order amount are required"
+                });
             }
-        });
-    } catch (error) {
-        console.error("Coupon validity check error:", error);
-        res.status(500).json({
-            success: false,
-            message: "Error checking coupon validity",
-            error: error.message
-        });
-    }
-};
+
+            const numericOrderAmount = parseFloat(orderAmount);
+            if (isNaN(numericOrderAmount) || numericOrderAmount <= 0) {
+                return res.status(400).json({
+                    success: false,
+                    message: "Invalid order amount"
+                });
+            }
+
+            const coupon = await Coupon.findOne({
+                code: code.toUpperCase().trim(),
+                status: "Active"
+            });
+
+            if (!coupon) {
+                return res.json({
+                    success: true,
+                    data: {
+                        isValid: false,
+                        reason: "Invalid or inactive coupon code"
+                    }
+                });
+            }
+
+            if (coupon.expiryDate && new Date() > new Date(coupon.expiryDate)) {
+                return res.json({
+                    success: true,
+                    data: {
+                        isValid: false,
+                        reason: "This coupon has expired"
+                    }
+                });
+            }
+
+            if (numericOrderAmount < coupon.minPurchase) {
+                return res.json({
+                    success: true,
+                    data: {
+                        isValid: false,
+                        reason: `Minimum purchase amount of $${coupon.minPurchase} required for this coupon`
+                    }
+                });
+            }
+
+            const discountAmount = Math.round((numericOrderAmount * coupon.discountPercent) / 100);
+
+            res.json({
+                success: true,
+                data: {
+                    isValid: true,
+                    discountAmount,
+                    coupon
+                }
+            });
+        } catch (error) {
+            console.error("Coupon validity check error:", error);
+            res.status(500).json({
+                success: false,
+                message: "Error checking coupon validity",
+                error: error.message
+            });
+        }
+    };
 
 export const useCoupon = async (req, res) => {
     try {

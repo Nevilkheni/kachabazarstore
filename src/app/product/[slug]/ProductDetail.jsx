@@ -9,10 +9,10 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { RiFacebookCircleFill } from "react-icons/ri";
 import { IoLogoInstagram } from "react-icons/io";
 import { RiTwitterXFill } from "react-icons/ri";
-import RelatedProducts from "@/app/home/relatedproducts.jsx/page";
 import ReviewDescription from "../reviewdescription/page";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/app/redux/cartSlice";
+import RelatedProducts from "@/app/home/relatedproducts.jsx/page";
 
 export default function ProductDetail({ product }) {
   const [count, setCount] = useState(1);

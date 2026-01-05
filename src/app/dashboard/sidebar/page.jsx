@@ -26,7 +26,11 @@ export default function Sidebar() {
   const isSection = (path) => pathname.startsWith(path);
 
   return (
+<<<<<<< HEAD
     <div className="w-full bg-[#f9fafb]white p-8 pb-5">
+=======
+    <div className="w-full bg-[#f9fafb] p-8 pb-5">
+>>>>>>> 4d3a92ceb66327c8e7bc3cc619b3677a47ab2d9d
       {user ? (
         <div className="flex gap-4 sm:gap-3 items-center py-1.5  ">
           <div className=" rounded-full shrink-0">
@@ -111,6 +115,7 @@ export default function Sidebar() {
             My Orders
           </Link>
 
+<<<<<<< HEAD
           {/* <li className="flex items-center gap-2.5 py-2.5 px-4 hover:bg-gray-100 rounded-lg text-gray-600">
             <FiStar className="text-lg" />
             My Review
@@ -127,6 +132,19 @@ export default function Sidebar() {
           >
             <FiUser className="text-lg" />
             My Review
+=======
+          <Link
+            href="/dashboard/my-review"
+            className={`flex items-center gap-2.5 py-2.5 px-4 rounded-lg
+              ${isSection("/dashboard/my-review")
+                ? "bg-[#DFFBE9] text-green-600"
+                : "hover:bg-gray-100 text-gray-600"
+              }
+            `}
+          >
+            <FiStar className="text-lg" />
+            My Review
+>>>>>>> 4d3a92ceb66327c8e7bc3cc619b3677a47ab2d9d
           </Link>
 
           <Link

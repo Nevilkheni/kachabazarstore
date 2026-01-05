@@ -5,13 +5,17 @@ import { HiOutlineLockClosed } from "react-icons/hi";
 import { useSelector } from "react-redux";
 
 export default function ChangePasswordPage() {
+<<<<<<< HEAD
+=======
+  // Get user data from Redux store
+>>>>>>> 4d3a92ceb66327c8e7bc3cc619b3677a47ab2d9d
   const user = useSelector((state) => state.user.user);
 
   return (
     <div className=" flex justify-center py-8 lg:px-6">
       <div className="w-full">
         <div className="flex  items-center gap-3 mb-6">
-          <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/20">
+          <div className="w-10 h-10 bg-linear-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/20">
             <HiOutlineKey className="text-xl" />
           </div>
 

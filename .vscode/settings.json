@@ -1,5 +1,9 @@
 {
     "kiroAgent.configureMCP": "Disabled",
     "CodeGPT.apiKey": "Gemini CLI",
-    "javascript.autoClosingTags": false
+    "javascript.autoClosingTags": false,
+    "typescript.preferences.includePackageJsonAutoImports": "off",
+    "typescript.suggest.autoImports": false,
+    "typescript.disableAutomaticTypeAcquisition": true,
+    "js/ts.implicitProjectConfig.checkJs": false
 }
